@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - Pop Description</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Pop Description</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#pop">Pop</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#class-method-description">Class &amp; Method Description</a></li>
+        
+            <li><a class="toctree-l3" href="#class-out">Class Out</a></li>
+        
+            <li><a class="toctree-l3" href="#class-led">Class Led</a></li>
+        
+            <li><a class="toctree-l3" href="#class-leds">Class Leds</a></li>
+        
+            <li><a class="toctree-l3" href="#class-input">Class Input</a></li>
+        
+            <li><a class="toctree-l3" href="#class-switch">Class Switch</a></li>
+        
+            <li><a class="toctree-l3" href="#class-switches">Class Switches</a></li>
+        
+            <li><a class="toctree-l3" href="#class-spiadc">Class SpiAdc</a></li>
+        
+            <li><a class="toctree-l3" href="#class-psd">Class Psd</a></li>
+        
+            <li><a class="toctree-l3" href="#class-cds">Class CDS</a></li>
+        
+            <li><a class="toctree-l3" href="#class-sound">Class Sound</a></li>
+        
+            <li><a class="toctree-l3" href="#class-vr">Class Vr</a></li>
+        
+            <li><a class="toctree-l3" href="#class-potentiometer">Class Potentiometer</a></li>
+        
+            <li><a class="toctree-l3" href="#class-piezobuzzer">Class PiezoBuzzer</a></li>
+        
+            <li><a class="toctree-l3" href="#class-oled">Class Oled</a></li>
+        
+            <li><a class="toctree-l3" href="#class-gesture">Class Gesture</a></li>
+        
+            <li><a class="toctree-l3" href="#class-pixeldisplay">Class PixelDisplay</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Ai/">Ai</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Pilot/">Pilot</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="pop.Ai/">pop.Ai</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="pop.Pilot/">pop.Pilot</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Pop Description</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pop">Pop</h1>
+<h2 id="class-method-description">Class &amp; Method Description</h2>
+<hr/>
+
+<h2 id="class-out">Class Out</h2>
+<ul>
+<li>Class Description : Output device controlled throught GPIO    </li>
+<li>Examples Use    <ul>
+<li>Out(n) : Out Object    <ul>
+<li>Params  <br />
+    n : GPIO Number Connected to the Output Device    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Functions    <ul>
+<li>on()  <br />
+    : Set GPIO Connected to Output Device to HIGH    </li>
+<li>off()  <br />
+    : Set GPIO Connected to Output Device to LOW    </li>
+</ul>
+</li>
+</ul>
+<h2 id="class-led">Class Led</h2>
+<ul>
+<li>Class Description : LEDs are controlled via GPIO    </li>
+<li>Example Use    <ul>
+<li>Led(n) : Led Object inheriting from Out Class    <ul>
+<li>Params  <br />
+    n : GPIO Number Connected to the LED    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-leds">Class Leds</h2>
+<ul>
+<li>Class Description : LEDs are controlled via GPIO    </li>
+<li>Example Use    <ul>
+<li>Leds(n) : Leds Object inheriting from Led Class    <ul>
+<li>Params  <br />
+    n : list Number defined board config Connected to the LED    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Functions    <ul>
+<li>allOn()  <br />
+    : Set all GPIO Connected to Output Device to HIGH    </li>
+<li>allOff()  <br />
+    : Set all GPIO Connected to Output Device to LOW    </li>
+</ul>
+</li>
+</ul>
+<p><hr/> </p>
+<h2 id="class-input">Class Input</h2>
+<ul>
+<li>Class Description : Read the Input Device through GPIO    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Input(n,activeHigh=Ture) : Input Object    <ul>
+<li>Params  <br />
+    n : GPIO Number Connected to the Input Device  <br />
+    activeHigh : Used to check if the Input Device is HIGH when pressed , Default True</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Defines    </p>
+<ul>
+<li>FALLING : Detect Falling Edge    </li>
+<li>RISING : Detect Rising Edge    </li>
+<li>BOTH : Detect Both Side    </li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>read() : Read the Input Device Status    </li>
+<li>setCallback(func,param=None,type=BOTH) : Set Callback Function When Detect Edge    <ul>
+<li>Params  <br />
+    func : Function to use when calling Callback  <br />
+    param : Arguments passed to the Callback function , Default None  <br />
+    type : Call condition of Callback function , Default BOTH    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-switch">Class Switch</h2>
+<ul>
+<li>Class Description : Read the switch status through GPIO    </li>
+<li>Example Use    <ul>
+<li>Switch(n) : Switch Object inheriting from Input Class    <ul>
+<li>Params  <br />
+    n : GPIO Number Connected to the Switch    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-switches">Class Switches</h2>
+<ul>
+<li>Class Description : Read the switch status through GPIO    </li>
+<li>Example Use    <ul>
+<li>Switches(n) : Switch Object inheriting from Input Class    <ul>
+<li>Params  <br />
+    n : list Number defined board config Connected to the Switch    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+
+<h2 id="class-spiadc">Class SpiAdc</h2>
+<ul>
+<li>Class Description : adc chip control through spi interface    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Defines    </p>
+<ul>
+<li>TYPE_AVERAGE : Average data based on sampling count    </li>
+<li>TYPE_NORMAL : Unaveraged raw data    </li>
+<li>MODE_FULL : Call Callback function always    </li>
+<li>MODE_INCLUSIVE : If data is in arange(max, min), call Callback function    </li>
+<li>MODE_EXCLUSIVE : If data is over arange, call Callback function    </li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>setChipSelect(cs) : Set SPI Chip Select PIN    <ul>
+<li>Params  <br />
+    cs : Chipselect GPIO for SPI Interface    </li>
+</ul>
+</li>
+<li>setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX) : Set up callback function for automatic data read    <ul>
+<li>Params  <br />
+    func : Function to use when calling Callback  <br />
+    param : Arguments passed to the Callback function , Default None  <br />
+    type : Data Read Type , Default TYPE_AVERAGE  <br />
+    mode : Select Mode , Default MODE_FULL  <br />
+    min : analog data minimum , Default 0  <br />
+    max : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)    </li>
+</ul>
+</li>
+<li>setSample(sample) : Set Sampling Count    <ul>
+<li>Params  <br />
+    sample : Sampling count    </li>
+</ul>
+</li>
+<li>getSample() : Get Sampling Count    </li>
+<li>read() : Read Data from Device (Raw Type)    </li>
+<li>readAverage() : Read Average Data from Device    </li>
+<li>readVolt(ref=3.3,max=3020.0) : Read Data from Device (Voltage Type)    <ul>
+<li>Params  <br />
+    ref : Reference Voltage  <br />
+    max : Maximum value of raw data    </li>
+</ul>
+</li>
+<li>readVoltAverage(ref=3.3,max=3020.0) : Read Data from Device (Voltage Type)    <ul>
+<li>Params  <br />
+    ref : Reference Voltage  <br />
+    max : Maximum value of raw data    </li>
+</ul>
+</li>
+<li>run() : Read data and call Callback function according to mode    </li>
+</ul>
+</li>
+</ul>
+<h2 id="class-psd">Class Psd</h2>
+<ul>
+<li>Class Description : Distance measurement using PSD sensor    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>calcDist(val,calibration=1.1) : Calculate distance value from raw data    <ul>
+<li>Params  <br />
+    val : ADC Raw Data  <br />
+    calibration : Calibration Value, Default 1.1    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-cds">Class CDS</h2>
+<ul>
+<li>Class Description : Light measurement using CDS sensor    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>setCalibrationPseudoLx(func) : Set calibration function    <ul>
+<li>Params  <br />
+    func : Calibration function    </li>
+</ul>
+</li>
+<li>readAverage() : Read lux data from device and calibration function    </li>
+</ul>
+</li>
+</ul>
+<h2 id="class-sound">Class Sound</h2>
+<ul>
+<li>Class Description : Ambient sound measurement using Sound sensor    </li>
+<li>Example Use    <ul>
+<li>Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-vr">Class Vr</h2>
+<ul>
+<li>Class Description : Voltage measurement with variable resistor    </li>
+<li>Example Use    <ul>
+<li>Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class-potentiometer">Class Potentiometer</h2>
+<ul>
+<li>Class Description : Voltage measurement with variable resistor    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    <ul>
+<li>Params  <br />
+    channel : ADC Channel  <br />
+    device : SPI Interface Channel , Default 0 (in Raspberry Pi)  <br />
+    bus : Not Used..  <br />
+    speed : SPI Interface Clock Speed , Default 1000000(1MHz)    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>setRangeTable(table) : Set potentiometer range table    <ul>
+<li>Params  <br />
+    table : Table with 10 elements  <br />
+    ex. [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]    </li>
+</ul>
+</li>
+<li>getRangeTable() : return range table    </li>
+<li>readAverage() : return level from range table    </li>
+</ul>
+</li>
+</ul>
+<p><hr/>   </p>
+<h2 id="class-piezobuzzer">Class PiezoBuzzer</h2>
+<ul>
+<li>Class Description  : PiezoBuzzer controlled via Software PWM    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>PiezoBuzzer(n) : PiezoBuzzer object inheriting from PopThread    <ul>
+<li>Params  <br />
+    n : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>setTempo(n) : Set tempo value    <ul>
+<li>Params  <br />
+    n : Value to be set to tempo    </li>
+</ul>
+</li>
+<li>getTempo() : Get tempo value    </li>
+<li>tone(scale,pitch,duration) : Play a note on piezo buzzer during duration value    <ul>
+<li>Params  <br />
+    scale : Scale value to play on piezo buzzer (int type)  <br />
+    pitch : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12  <br />
+    duration : Tone is playing during duration value    </li>
+</ul>
+</li>
+<li>rest(duration) : Stop to play piezo buzzer    <ul>
+<li>Params  <br />
+    duration : The duration of the stopping    </li>
+</ul>
+</li>
+<li>play(sheet) : play music by sheet    <ul>
+<li>Params  <br />
+    sheet : list [[scale],[pitch],[duration]]    </li>
+</ul>
+</li>
+<li>isPlay() : return play status    </li>
+</ul>
+</li>
+</ul>
+<hr/>
+
+<h2 id="class-oled">Class Oled</h2>
+<ul>
+<li>Class Description : Oled Controlled vi I2C Interface    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -&gt; 0x3c). This function calls init(), clearDisplay()    <ul>
+<li>Params  <br />
+    addr : OLED I2C ADDR.default 0x3c  <br />
+    type : OLED Type. difined board config  <br />
+    automode : select automode. default True</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Defines    </p>
+<ul>
+<li>OLED_SSD1306_I2C_128x32 : OLED device type number, if model name is 'SSD1306', select this type    </li>
+<li>OLED_SH1106_I2C_128x64 : OLED device type number, if model name is 'SSH1106', select this type    </li>
+<li>BLACK : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    </li>
+<li>WHITE : Another of them is white. Numeric value is 1    </li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>init(type=OLED_SH1106_I2C_128x64) : Initialize OLED and set width/height of OLED. This function calls setTextSize(), setTextColor(), clearDisplay()    <ul>
+<li>Params  <br />
+    type : Select OLED type    </li>
+</ul>
+</li>
+<li>print(string) : Print a string on OLED. Replace '\n' to New-Line    <ul>
+<li>Params  <br />
+    string: The string to print on OLED    </li>
+</ul>
+</li>
+<li>drawCircle(x0, y0, r, color) : Draw a circle on OLED    <ul>
+<li>Params  <br />
+    x0 : Start point of x-axis  <br />
+    y0 : Start point of y-axis  <br />
+    r : Radious of the circle  <br />
+    color : The color of a circle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>fillCircle(x0, y0, r, color) : Draw a filled circle on OLED    <ul>
+<li>Params  <br />
+    x0 : Start point of x-axis  <br />
+    y0 : Start point of y-axis  <br />
+    r : Radious of the circle  <br />
+    color : The color of a circle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>drawLine(x0, y0, x1, y1, color) : Draw a line on OLED    <ul>
+<li>Params  <br />
+    x0 : Start point of x-axis  <br />
+    y0 : Start point of y-axis  <br />
+    x1 : End point of x-axis  <br />
+    y1 : End point of y-axis  <br />
+    color : The color of a line. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>drawRect(x, y, w, h, color) : Draw a rectangle on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Width of the rectangle  <br />
+    h : Height of the rectangle  <br />
+    color : The color of a rectangle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>fillRect(x, y, w, h, color) : Draw a filled rectangle on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Width of the rectangle  <br />
+    h : Height of the rectangle  <br />
+    color : The color of a rectangle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>drawVerticalBargraph(x, y, w, h, color, percent) : Draw a graph on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Width of the graph  <br />
+    h : Full height of the graph  <br />
+    color : The color of the graph. BLACK(0) or WHITE(1)  <br />
+    percent : The percentage of a graph. The direction of graph is always up-side    </li>
+</ul>
+</li>
+<li>drawHorizontalBargraph(x, y, w, h, color, percent) : Draw a graph on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Full width of the graph  <br />
+    h : Height of the graph  <br />
+    color : The color of the graph. BLACK(0) or WHITE(1)  <br />
+    percent : The percentage of a graph. The direction of graph is always right-side    </li>
+</ul>
+</li>
+<li>drawRoundRect(x, y, w, h, r, color) : Draw a rounded rectangle on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Width of the rounded rectangle  <br />
+    h : Height of the rounded rectangle  <br />
+    r : Curvature of edge of the rounded rectangle  <br />
+    color : The color of a graph. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>fillRoundRect(x, y, w, h, r, color) : Draw a rounded and filled rectangle on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    w : Width of the rounded rectangle  <br />
+    h : Height of the rounded rectangle  <br />
+    r : Curvature of edge of the rounded rectangle  <br />
+    color : The color of a graph BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>drawTriangle(x0, y0, x1, y1, x2, y2, color) : Draw a triangle on OLED    <ul>
+<li>Params  <br />
+    x0 : First point of x-axis  <br />
+    y0 : First point of y-axis  <br />
+    x1 : Second point of x-axis  <br />
+    y1 : Second point of y-axis  <br />
+    x2 : Third point of x-axis  <br />
+    y2 : Third point of y-axis  <br />
+    color : The color of a triangle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>fillTriangle(x0, y0, x1, y1, x2, y2, color) : Draw a filled triangle on OLED    <ul>
+<li>Params  <br />
+    x0 : First point of x-axis  <br />
+    y0 : First point of y-axis  <br />
+    x1 : Second point of x-axis  <br />
+    y1 : Second point of y-axis  <br />
+    x2 : Third point of x-axis  <br />
+    y2 : Third point of y-axis  <br />
+    color : The color of a triangle. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>drawChar(x, y, c, color, bg, size) : Draw a character on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of x-axis  <br />
+    c : A character to be drawn  <br />
+    color : The color of a character. BLACK(0) or WHITE(1)  <br />
+    bg : The background of a character. Background size is 6 * 8 * textsize  <br />
+    size : Pixel size of charactor strock. Default is 1    </li>
+</ul>
+</li>
+<li>drawBitmap(x, y, bitmap, w, h, color) : Draw a bitmap data on OLED    <ul>
+<li>Params  <br />
+    x : Start point of x-axis  <br />
+    y : Start point of y-axis  <br />
+    bitmap : A two dimensional array which consist of 0 and 1, 0 is black and 1 is white  <br />
+    w : Width of bitmap data  <br />
+    h : Height of bitmap data  <br />
+    color : The color of a character. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>setCursor(x, y) : Set the cursor on OLED, This value is used in write()    <ul>
+<li>Params  <br />
+    x : x-axis point of cursor  <br />
+    y : y-axis point of cursor    </li>
+</ul>
+</li>
+<li>setTextSize(s) : Set text size, This value is used in write()    <ul>
+<li>Params  <br />
+    s : Pixel size of charactor strock. Default is 1    </li>
+</ul>
+</li>
+<li>setTextColor(c) : Set text color, This value is used in write()    <ul>
+<li>Params  <br />
+    c : Text color value. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>setTextColorWithBg(c, b) : Set text color and background color, This value is used in write()    <ul>
+<li>Params  <br />
+    c : Text color value. BLACK(0) or WHITE(1)  <br />
+    b : Background color value. BLACK(0) or WHITE(1)    </li>
+</ul>
+</li>
+<li>width() : Retun widht of OLED    </li>
+<li>height() : Return height of OLED    </li>
+<li>drawPixel(x, y, color) : Draw a dot on OLED    <ul>
+<li>Params  <br />
+    x : The point of a dot  <br />
+    y : The point of a dot  <br />
+    color : The color of a dot    </li>
+</ul>
+</li>
+<li>setBrightness(Brightness) : Set brightness of OLED    <ul>
+<li>Params  <br />
+    Brightness : Brightness value to be set    </li>
+</ul>
+</li>
+<li>invertDisplay(i) : Change display mode    <ul>
+<li>Params  <br />
+    i : If i is True, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    </li>
+</ul>
+</li>
+<li>istartscrollright(start, stop) : Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    <ul>
+<li>Params  <br />
+    start : Start point of scrolling  <br />
+    stop : Stop point of scrolling    </li>
+</ul>
+</li>
+<li>startscrollleft(start, stop) : Scroll the screen in the row-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    <ul>
+<li>Params  <br />
+    start : Start point of scrolling  <br />
+    stop : Stop point of scrolling    </li>
+</ul>
+</li>
+<li>startscrolldiagright(start, stop) : Scroll the screen in the column-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    <ul>
+<li>Params  <br />
+    start : Start point of scrolling  <br />
+    stop : Stop point of scrolling    </li>
+</ul>
+</li>
+<li>startscrolldiagleft(start, stop) : Scroll the screen in the column-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    <ul>
+<li>Params  <br />
+    start : Start point of scrolling  <br />
+    stop : Stop point of scrolling    </li>
+</ul>
+</li>
+<li>stopscroll() : Stop scrolling the screen    </li>
+<li>display() : Display buffer data on OLED    </li>
+<li>clearDisplay() : Clear the data on OLED    </li>
+<li>write(c) : Write the character at location of cursor on OLED    <ul>
+<li>Params  <br />
+    c : The character to be written    </li>
+</ul>
+</li>
+<li>setAutomode(automode) : set automode    <ul>
+<li>Params  <br />
+    automode : True or False    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+
+<h2 id="class-gesture">Class Gesture</h2>
+<ul>
+<li>Class Description : Apds9960 Controlled via I2C Interface    </li>
+<li>
+<p>Example Use    </p>
+<ul>
+<li>Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -&gt; 0x39)    </li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>isAvailable() : return Gesture detection status(1). Wait until Gesture is detected    </li>
+<li>read() : return number as Gesture status.  <br />
+    0 : "None" , 1 : "Left", 2 : "Right", 3 : "Up", 4 : "Down", 5: "Near", 6 : "Far"    </li>
+<li>readStr() : return String as Gesture status.  <br />
+    "None" , "Left", "Right", "Up", "Down", "Near", "Far"    </li>
+</ul>
+</li>
+<li>
+<p>Inner class Light    </p>
+<ul>
+<li>Light() : Light object    </li>
+<li>Functions    <ul>
+<li>read() : return light value    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Inner class Color    </p>
+<ul>
+<li>Color() : Color object    </li>
+<li>Functions    <ul>
+<li>readRed() : return Red value    </li>
+<li>readGreen() : return Green value    </li>
+<li>readBlue() : return Blue value    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inner class Proximity    <ul>
+<li>Proximity() : Proximity object    </li>
+<li>Functions    <ul>
+<li>read() : return Proximity value    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+
+<h2 id="class-pixeldisplay">Class PixelDisplay</h2>
+<ul>
+<li>
+<p>Class Description : Pixel Display controlled via Hardware PWM    </p>
+<ul>
+<li>PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    <ul>
+<li>Params  <br />
+    width : Number of Pixel width  <br />
+    height : Number of Pixel height  <br />
+    automode : automode setting. True/False</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functions    </p>
+<ul>
+<li>fill(color_arr) : Fill PixelDisplay to one color    <ul>
+<li>Params  <br />
+    color_arr : A color to be filled. Type is list of [R, G, B]    </li>
+</ul>
+</li>
+<li>clear() : clear PixelDisplay    </li>
+<li>setColor(x, y, color_arr) : set PixelDisplay color_arr on x,y    <ul>
+<li>Params  <br />
+    x : x-axis  <br />
+    y : y-axis  <br />
+    color_arr : A color to be set. Type is list of [R, G, B] or HEX (0xRRGGBB)    </li>
+</ul>
+</li>
+<li>getColor(x, y) : return color on x,y as INT type    <ul>
+<li>Params  <br />
+    x : x-axis  <br />
+    y : y-axis    </li>
+</ul>
+</li>
+<li>setAutomode(automode) : set automode. default True. if False set, shuld use display()    <ul>
+<li>Params  <br />
+    automode : True or False    </li>
+</ul>
+</li>
+<li>rainbow() : display rainbow color on Pixel Display    </li>
+<li>setBrightness(brightness) : set Brightness    <ul>
+<li>Params  <br />
+    brightness : brightness (0~255)    </li>
+</ul>
+</li>
+<li>display() : send command from buffer. when Automode False use    </li>
+<li>getRGBType() : getRGBType    </li>
+<li>RGBtoHEX(color_arr) : convert RGB list data to HEX    </li>
+<li>setColorInvert(invert) : inver color. default False    <ul>
+<li>Params  <br />
+    invert = True : input (255,0,0) -&gt; (0,255,255)  <br />
+    invert = False : input (255,0,0) -&gt; (255,0,0)    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Ai/" class="btn btn-neutral float-right" title="Ai">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="Ai/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2020-05-04 02:03:44
+-->
