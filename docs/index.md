@@ -1,4 +1,4 @@
-# Pop Library Method Description    
+# Pop.py Class & Method Description    
 <hr/>
 ## Class Out    
 * Class Description : Output device controlled throught GPIO    
