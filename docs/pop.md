@@ -30,7 +30,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Led(n)` : Led Object inheriting from Out Class    <br><br>  
+&emsp;`Led(n)` : Led Object inheriting from Out Class  <br><br>
 &emsp;**Params**    
 &emsp;&emsp;`n` : GPIO Number Connected to the LED    
 <br><br>
@@ -40,45 +40,46 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;Leds(n) : Leds Object inheriting from Led Class  <br><br>  
+&emsp;`Leds(n)` : Leds Object inheriting from Led Class  <br><br>
 &emsp;**Params**    
-&emsp;&emsp;n : list Number defined board config Connected to the LED  
+&emsp;&emsp;`n` : list Number defined board config Connected to the LED  
 
 <h5>&emsp;Methods</h5>   
 
-	* allOn()    
-		: Set all GPIO Connected to Output Device to HIGH    
-	* allOff()    
-		: Set all GPIO Connected to Output Device to LOW    
+&emsp;`allOn()` : Set all GPIO Connected to Output Device to HIGH    
+&emsp;`allOff()` : Set all GPIO Connected to Output Device to LOW    
 
 <hr/> 
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
 > Read the Input Device through GPIO    
 
-<h5>&emsp;Initialization</h5>   
-	* Input(n,activeHigh=Ture) : Input Object    
-		**Params**   
-			n : GPIO Number Connected to the Input Device    
-			activeHigh : Used to check if the Input Device is HIGH when pressed , Default True    
+<h5>&emsp;Initialization</h5> 
 
-* Defines    
-	* FALLING : Detect Falling Edge    
-	* RISING : Detect Rising Edge    
-	* BOTH : Detect Both Side    
+&emsp;`Input(n,activeHigh=Ture)` : Input Object    <br><br>
+&emsp;**Params**   
+&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
+&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default True    
 
-<h5>&emsp;Methods</h5>   
-	* read() : Read the Input Device Status    
-	* setCallback(func,param=None,type=BOTH) : Set Callback Function When Detect Edge    
-		**Params**   
-			func : Function to use when calling Callback    
-			param : Arguments passed to the Callback function , Default None    
-			type : Call condition of Callback function , Default BOTH    
+&emsp;**Defines**    
+&emsp;&emsp;FALLING : Detect Falling Edge    
+&emsp;&emsp;RISING : Detect Rising Edge    
+&emsp;&emsp;BOTH : Detect Both Side    
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;`read()` : Read the Input Device Status    
+&emsp;`setCallback(func,param=None,type=BOTH)` : Set Callback Function When Detect Edge    <br><br>
+&emsp;**Params**   
+&emsp;&emsp;`func` : Function to use when calling Callback    
+&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
+&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH    
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
 > Read the switch status through GPIO    
 
 <h5>&emsp;Initialization</h5>   
+
 	* Switch(n) : Switch Object inheriting from Input Class    
 		**Params**   
 			n : GPIO Number Connected to the Switch    
