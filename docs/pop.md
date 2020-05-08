@@ -121,32 +121,41 @@ from pop import *
 &emsp;&emsp;&emsp;`MODE_EXCLUSIVE` : If data is over arange, call Callback function    
 
 <h5>&emsp;Methods</h5>   
-	* setChipSelect(cs) : Set SPI Chip Select PIN    
-		**Params**   
-			cs : Chipselect GPIO for SPI Interface    
-	* setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX) : Set up callback function for automatic data read    
-		**Params**   
-			func : Function to use when calling Callback    
-			param : Arguments passed to the Callback function , Default None    
-			type : Data Read Type , Default TYPE_AVERAGE    
-			mode : Select Mode , Default MODE_FULL    
-			min : analog data minimum , Default 0    
-			max : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)    
-	* setSample(sample) : Set Sampling Count    
-		**Params**   
-			sample : Sampling count    
-	* getSample() : Get Sampling Count    
-	* read() : Read Data from Device (Raw Type)    
-	* readAverage() : Read Average Data from Device    
-	* readVolt(ref=3.3,max=3020.0) : Read Data from Device (Voltage Type)    
-		**Params**   
-			ref : Reference Voltage    
-			max : Maximum value of raw data    
-	* readVoltAverage(ref=3.3,max=3020.0) : Read Data from Device (Voltage Type)    
-		**Params**   
-			ref : Reference Voltage    
-			max : Maximum value of raw data    
-	* run() : Read data and call Callback function according to mode    
+
+&emsp;`setChipSelect(cs)` : Set SPI Chip Select PIN    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface    
+
+&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` : Set up callback function for automatic data read    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
+&emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
+&emsp;&emsp;&emsp;`type` : Data Read Type , Default TYPE_AVERAGE    
+&emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
+&emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
+&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)    
+
+&emsp;`setSample(sample)` : Set Sampling Count    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`sample` : Sampling count   
+ 
+&emsp;`getSample()` : Get Sampling Count    
+
+&emsp;`read()` : Read Data from Device (Raw Type)    
+
+&emsp;`readAverage()` : Read Average Data from Device    
+
+&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`ref` : Reference Voltage    
+&emsp;&emsp;&emsp;`max` : Maximum value of raw data    
+
+&emsp;`readVoltAverage(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`ref` : Reference Voltage    
+&emsp;&emsp;&emsp;`max` : Maximum value of raw data  
+
+&emsp;`run()` : Read data and call Callback function according to mode    
     
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
 > Distance measurement using PSD sensor    
