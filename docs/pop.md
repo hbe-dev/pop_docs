@@ -23,7 +23,8 @@ from pop import *
 
 &emsp; `on()` : Set GPIO Connected to Output Device to HIGH  
 &emsp; `off()` : Set GPIO Connected to Output Device to LOW   
-<br><br>
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
 > LEDs are controlled via GPIO    
@@ -32,8 +33,9 @@ from pop import *
 
 &emsp;`Led(n)` : Led Object inheriting from Out Class  <br><br>
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the LED    
-<br><br>
+&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the LED   
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
 > LEDs are controlled via GPIO    
@@ -49,7 +51,7 @@ from pop import *
 &emsp;`allOn()` : Set all GPIO Connected to Output Device to HIGH    
 &emsp;`allOff()` : Set all GPIO Connected to Output Device to LOW    
 
-<hr/> 
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
 > Read the Input Device through GPIO    
@@ -73,7 +75,9 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
-&emsp;&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH    
+&emsp;&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH  
+  
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
 > Read the switch status through GPIO    
