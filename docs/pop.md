@@ -139,13 +139,13 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sample` : Sampling count   
  
-&emsp;`getSample()` : Get Sampling Count    
+&emsp;&emsp;&emsp;`getSample()` : Get Sampling Count    
 
-&emsp;`read()` : Read Data from Device (Raw Type)    
+&emsp;&emsp;&emsp;`read()` : Read Data from Device (Raw Type)    
 
-&emsp;`readAverage()` : Read Average Data from Device    
+&emsp;&emsp;&emsp;`readAverage()` : Read Average Data from Device    
 
-&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+&emsp;&emsp;&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data    
@@ -155,25 +155,31 @@ from pop import *
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data  
 
-&emsp;`run()` : Read data and call Callback function according to mode    
-    
+&emsp;`run()` : Read data and call Callback function according to mode  
+
+---
+
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
 > Distance measurement using PSD sensor    
 
 <h5>&emsp;Initialization</h5>   
-	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 
-<h5>&emsp;Methods</h5>   
-	* calcDist(val,calibration=1.1) : Calculate distance value from raw data    
-		**Params**   
-			val : ADC Raw Data    
-			calibration : Calibration Value, Default 1.1    
+&emsp;`Psd(channel=-1, device=0, bus=0, speed=1000000)` : PSD object inheriting from SpiAdc Class    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;`calcDist(val,calibration=1.1)` : Calculate distance value from raw data    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`val` : ADC Raw Data    
+&emsp;&emsp;&emsp;`calibration` : Calibration Value, Default 1.1    
 			
+---
+
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
 > Light measurement using CDS sensor    
 
