@@ -1,7 +1,14 @@
 # Pop
+You can import the Pop Library through the code : 
+
+```
+import pop
+```
+
 ## Class & Method Description    
 <hr/>
-## Class Out    
+
+## *Class* **Out**    
 * Class Description : Output device controlled throught GPIO    
 * Examples Use    
 	* Out(n) : Out Object    
@@ -12,13 +19,13 @@
 		: Set GPIO Connected to Output Device to HIGH    
 	* off()    
 		: Set GPIO Connected to Output Device to LOW    
-## Class Led    
+## *Class* **Led**    
 * Class Description : LEDs are controlled via GPIO    
 * Example Use    
 	* Led(n) : Led Object inheriting from Out Class    
 		* Params    
 			n : GPIO Number Connected to the LED    
-## Class Leds    
+## *Class* **Leds**    
 * Class Description : LEDs are controlled via GPIO    
 * Example Use    
 	* Leds(n) : Leds Object inheriting from Led Class    
@@ -31,7 +38,8 @@
 		: Set all GPIO Connected to Output Device to LOW    
 
 <hr/> 
-## Class Input    
+
+## *Class* **Input**    
 * Class Description : Read the Input Device through GPIO    
 * Example Use    
 	* Input(n,activeHigh=Ture) : Input Object    
@@ -52,14 +60,14 @@
 			param : Arguments passed to the Callback function , Default None    
 			type : Call condition of Callback function , Default BOTH    
 
-## Class Switch    
+## *Class* **Switch**    
 * Class Description : Read the switch status through GPIO    
 * Example Use    
 	* Switch(n) : Switch Object inheriting from Input Class    
 		* Params    
 			n : GPIO Number Connected to the Switch    
 
-## Class Switches    
+## *Class* **Switches**    
 * Class Description : Read the switch status through GPIO    
 * Example Use    
 	* Switches(n) : Switch Object inheriting from Input Class    
@@ -67,7 +75,8 @@
 			n : list Number defined board config Connected to the Switch    
 
 <hr/>
-## Class SpiAdc    
+
+## *Class* **SpiAdc**    
 * Class Description : adc chip control through spi interface    
 * Example Use    
 	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
@@ -112,7 +121,7 @@
 			max : Maximum value of raw data    
 	* run() : Read data and call Callback function according to mode    
     
-## Class Psd    
+## *Class* **Psd**    
 * Class Description : Distance measurement using PSD sensor    
 * Example Use    
 	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
@@ -128,7 +137,7 @@
 			val : ADC Raw Data    
 			calibration : Calibration Value, Default 1.1    
 			
-## Class CDS  
+## *Class* **CDS**  
 * Class Description : Light measurement using CDS sensor    
 * Example Use    
 	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
@@ -144,7 +153,7 @@
 			func : Calibration function    
 	* readAverage() : Read lux data from device and calibration function    
 
-##  Class Sound    
+## *Class* **Sound**    
 * Class Description : Ambient sound measurement using Sound sensor    
 * Example Use    
 	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
@@ -154,7 +163,7 @@
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-##   Class Vr    
+## *Class* **Vr**    
 * Class Description : Voltage measurement with variable resistor    
 * Example Use    
 	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
@@ -164,7 +173,7 @@
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-##   Class Potentiometer    
+## *Class* **Potentiometer**    
 * Class Description : Voltage measurement with variable resistor    
 * Example Use    
 	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
@@ -183,7 +192,8 @@
 	* readAverage() : return level from range table    
 
 <hr/>	
-##   Class PiezoBuzzer    
+
+## *Class* **PiezoBuzzer**    
 * Class Description  : PiezoBuzzer controlled via Software PWM    
 * Example Use    
 	* PiezoBuzzer(n) : PiezoBuzzer object inheriting from PopThread    
@@ -209,7 +219,8 @@
 	* isPlay() : return play status    
 
 <hr/>
-##   Class Oled    
+
+## *Class* **Oled**    
 * Class Description : Oled Controlled vi I2C Interface    
 * Example Use    
 	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
@@ -384,7 +395,8 @@
 			automode : True or False    
 
 <hr/>
-##    Class Gesture    
+
+## *Class* **Gesture**    
 
 * Class Description : Apds9960 Controlled via I2C Interface    
 * Example Use    
@@ -414,7 +426,8 @@
 		* read() : return Proximity value    
 	
 <hr/>
-##    Class PixelDisplay    
+
+## *Class* **PixelDisplay**    
 * Class Description : Pixel Display controlled via Hardware PWM    
 	* PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    
 		* Params    
@@ -450,3 +463,14 @@
 		* Params    
 			invert = True : input (255,0,0) -> (0,255,255)    
 			invert = False : input (255,0,0) -> (255,0,0)    
+
+# Pop.AI
+Import the Pop.AI Library through the code : 
+
+```
+from pop import AI
+```
+
+## Class & Method Description    
+---
+Class 
