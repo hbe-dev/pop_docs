@@ -61,7 +61,7 @@ from pop import *
 &emsp;`Input(n,activeHigh=Ture)` : Input Object<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
-&emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default True    
+&emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default `True`    
 
 <h5>&emsp;Definitions</h5>
 
@@ -294,7 +294,7 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : OLED I2C ADDR.default 0x3c    
 &emsp;&emsp;&emsp;`type` : OLED Type. difined board config    
-&emsp;&emsp;&emsp;`automode` : select automode. default True    
+&emsp;&emsp;&emsp;`automode` : select automode. default `True`    
 
 &emsp;**Definitions**    
 &emsp;`OLED_SSD1306_I2C_128x32` : OLED device type number, if model name is 'SSD1306', select this type    
@@ -458,7 +458,7 @@ from pop import *
 
 &emsp;`invertDisplay(i)` : Change display mode    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`i` : If i is True, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    
+&emsp;&emsp;&emsp;`i` : If i is `True`, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    
 
 &emsp;`istartscrollright(start, stop)` <br>&emsp;: Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
 &emsp;&emsp;**Params**   
@@ -488,7 +488,7 @@ from pop import *
 
 &emsp;`setAutomode(automode)` : set automode    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`automode` : True or False    
+&emsp;&emsp;&emsp;`automode` : `True` or `False`    
 
 <hr/>
 
@@ -544,11 +544,11 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`width` : Number of Pixel width    
 &emsp;&emsp;&emsp;`height` : Number of Pixel height    
-&emsp;&emsp;&emsp;`automode` : automode setting. True/False    
+&emsp;&emsp;&emsp;`automode` : automode setting. `True` or `False`    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;`display()` : send command from buffer. when Automode False use    
+&emsp;`display()` : send command from buffer. when Automode `False` use    
 &emsp;`getRGBType()` : getRGBType    
 &emsp;`RGBtoHEX(color_arr)` : convert RGB list data to HEX  
 &emsp;`clear()` : clear PixelDisplay  
@@ -568,7 +568,7 @@ from pop import *
 &emsp;&emsp;&emsp;`x` : x-axis    
 &emsp;&emsp;&emsp;`y` : y-axis 
 
-&emsp;`setAutomode(automode)` : set automode. default True. if False set, shuld use display()    
+&emsp;`setAutomode(automode)` : set automode. default `True`. if `False` set, shuld use display()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
    
@@ -576,7 +576,7 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`brightness` : brightness (0~255)    
   
-&emsp;`setColorInvert(invert)` : inver color. default False    
+&emsp;`setColorInvert(invert)` : inver color. default `False`    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`invert`  
 &emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
