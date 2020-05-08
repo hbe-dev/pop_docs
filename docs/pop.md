@@ -514,11 +514,13 @@ from pop import *
 <h5>&emsp;Inner Class</h5>  
 
 &emsp;**Light**    
+&emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Light()` : Light object  <br><br>
 &emsp;&emsp;**Methods**<br>
 &emsp;&emsp;`read()` : return light value    
 
 &emsp;**Color**    
+&emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Color()` : Color object  <br><br>
 &emsp;&emsp;**Methods**<br>
 &emsp;&emsp;`readRed()` : return Red value    
@@ -526,6 +528,7 @@ from pop import *
 &emsp;&emsp;`readBlue()` : return Blue value
 
 &emsp;**Proximity**  
+&emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Proximity()` : Proximity object  <br><br>
 &emsp;&emsp;**Methods**<br>
 &emsp;&emsp;`read()` : return Proximity value    
