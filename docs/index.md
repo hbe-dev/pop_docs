@@ -1,14 +1,15 @@
 # Pop
-You can import the Pop Library through the code : 
+You can import the whole of Pop Library through the code : 
 
 ```
-import pop
+from pop import *
 ```
+<br><br>
 
 ## Class & Method Description    
 <hr/>
 
-## *Class* **Out**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
 * Class Description : Output device controlled throught GPIO    
 * Examples Use    
 	* Out(n) : Out Object    
@@ -19,13 +20,13 @@ import pop
 		: Set GPIO Connected to Output Device to HIGH    
 	* off()    
 		: Set GPIO Connected to Output Device to LOW    
-## *Class* **Led**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
 * Class Description : LEDs are controlled via GPIO    
 * Example Use    
 	* Led(n) : Led Object inheriting from Out Class    
 		* Params    
 			n : GPIO Number Connected to the LED    
-## *Class* **Leds**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
 * Class Description : LEDs are controlled via GPIO    
 * Example Use    
 	* Leds(n) : Leds Object inheriting from Led Class    
@@ -39,7 +40,7 @@ import pop
 
 <hr/> 
 
-## *Class* **Input**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
 * Class Description : Read the Input Device through GPIO    
 * Example Use    
 	* Input(n,activeHigh=Ture) : Input Object    
@@ -60,14 +61,14 @@ import pop
 			param : Arguments passed to the Callback function , Default None    
 			type : Call condition of Callback function , Default BOTH    
 
-## *Class* **Switch**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
 * Class Description : Read the switch status through GPIO    
 * Example Use    
 	* Switch(n) : Switch Object inheriting from Input Class    
 		* Params    
 			n : GPIO Number Connected to the Switch    
 
-## *Class* **Switches**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
 * Class Description : Read the switch status through GPIO    
 * Example Use    
 	* Switches(n) : Switch Object inheriting from Input Class    
@@ -76,7 +77,7 @@ import pop
 
 <hr/>
 
-## *Class* **SpiAdc**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
 * Class Description : adc chip control through spi interface    
 * Example Use    
 	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
@@ -121,7 +122,7 @@ import pop
 			max : Maximum value of raw data    
 	* run() : Read data and call Callback function according to mode    
     
-## *Class* **Psd**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
 * Class Description : Distance measurement using PSD sensor    
 * Example Use    
 	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
@@ -137,7 +138,7 @@ import pop
 			val : ADC Raw Data    
 			calibration : Calibration Value, Default 1.1    
 			
-## *Class* **CDS**  
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
 * Class Description : Light measurement using CDS sensor    
 * Example Use    
 	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
@@ -153,7 +154,7 @@ import pop
 			func : Calibration function    
 	* readAverage() : Read lux data from device and calibration function    
 
-## *Class* **Sound**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
 * Class Description : Ambient sound measurement using Sound sensor    
 * Example Use    
 	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
@@ -163,7 +164,7 @@ import pop
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-## *Class* **Vr**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
 * Class Description : Voltage measurement with variable resistor    
 * Example Use    
 	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
@@ -173,7 +174,7 @@ import pop
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-## *Class* **Potentiometer**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
 * Class Description : Voltage measurement with variable resistor    
 * Example Use    
 	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
@@ -193,7 +194,7 @@ import pop
 
 <hr/>	
 
-## *Class* **PiezoBuzzer**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PiezoBuzzer**    
 * Class Description  : PiezoBuzzer controlled via Software PWM    
 * Example Use    
 	* PiezoBuzzer(n) : PiezoBuzzer object inheriting from PopThread    
@@ -220,7 +221,7 @@ import pop
 
 <hr/>
 
-## *Class* **Oled**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
 * Class Description : Oled Controlled vi I2C Interface    
 * Example Use    
 	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
@@ -396,7 +397,7 @@ import pop
 
 <hr/>
 
-## *Class* **Gesture**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Gesture**    
 
 * Class Description : Apds9960 Controlled via I2C Interface    
 * Example Use    
@@ -427,7 +428,7 @@ import pop
 	
 <hr/>
 
-## *Class* **PixelDisplay**    
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PixelDisplay**    
 * Class Description : Pixel Display controlled via Hardware PWM    
 	* PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    
 		* Params    
@@ -473,4 +474,4 @@ from pop import AI
 
 ## Class & Method Description    
 ---
-Class 
+## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Linear_Regression**
