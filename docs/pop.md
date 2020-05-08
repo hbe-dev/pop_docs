@@ -6,22 +6,25 @@ from pop import *
 ```
 <br><br>
 
-## Class & Method Description    
+# Class & Method Description    
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
 
 > Output device controlled throught GPIO
 
-* Examples Use    
-	* Out(n) : Out Object    
-		* Params    
-			n : GPIO Number Connected to the Output Device    
-* Methods    
-	* on()    
+**Examples Use**
+
+    Out(n) : Out Object    
+    Params    
+		n : GPIO Number Connected to the Output Device    
+**Methods**    
+
+    on()    
 		: Set GPIO Connected to Output Device to HIGH    
-	* off()    
-		: Set GPIO Connected to Output Device to LOW    
+    off()    
+		: Set GPIO Connected to Output Device to LOW   
+         
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
 > LEDs are controlled via GPIO    
 
