@@ -63,7 +63,7 @@ from pop import *
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
 &emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default True    
 
-&emsp;&emsp;**Defines**    
+&emsp;&emsp;**Definitions**    
 &emsp;&emsp;&emsp;`FALLING` : Detect Falling Edge    
 &emsp;&emsp;&emsp;`RISING` : Detect Rising Edge    
 &emsp;&emsp;&emsp;`BOTH` : Detect Both Side    
@@ -84,7 +84,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;Switch(n) : Switch Object inheriting from Input Class   <br><br> 
+&emsp;`Switch(n)` : Switch Object inheriting from Input Class   <br><br> 
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Switch    
 
@@ -113,7 +113,7 @@ from pop import *
 &emsp;&emsp;&emsp;`bus` : Not Used..    
 &emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)  
 			
-&emsp;&emsp;**Defines**    
+&emsp;&emsp;**Definitions**    
 &emsp;&emsp;&emsp;`TYPE_AVERAGE` : Average data based on sampling count    
 &emsp;&emsp;&emsp;`TYPE_NORMAL` : Unaveraged raw data    
 &emsp;&emsp;&emsp;`MODE_FULL` : Call Callback function always    
@@ -262,7 +262,7 @@ from pop import *
 			type : OLED Type. difined board config    
 			automode : select automode. default True    
 
-* Defines    
+* Definitions    
 	* OLED_SSD1306_I2C_128x32 : OLED device type number, if model name is 'SSD1306', select this type    
 	* OLED_SH1106_I2C_128x64 : OLED device type number, if model name is 'SSH1106', select this type    
 	* BLACK : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
