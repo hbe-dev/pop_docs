@@ -15,7 +15,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp; `Out(n)` : Out Object  <br><br>
+&emsp; `Out(n)` : Out Object<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Output Device
 
@@ -31,7 +31,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Led(n)` : Led Object inheriting from Out Class  <br><br>
+&emsp;`Led(n)` : Led Object inheriting from Out Class<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the LED   
 
@@ -42,7 +42,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Leds(n)` : Leds Object inheriting from Led Class  <br><br>
+&emsp;`Leds(n)` : Leds Object inheriting from Led Class<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the LED  
 
@@ -58,20 +58,21 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;`Input(n,activeHigh=Ture)` : Input Object    <br><br>
+&emsp;`Input(n,activeHigh=Ture)` : Input Object<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
 &emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default True    
 
-&emsp;&emsp;**Definitions**    
-&emsp;&emsp;&emsp;`FALLING` : Detect Falling Edge    
-&emsp;&emsp;&emsp;`RISING` : Detect Rising Edge    
-&emsp;&emsp;&emsp;`BOTH` : Detect Both Side    
+<h5>&emsp;Definitions</h5>
+
+&emsp;`FALLING` : Detect Falling Edge    
+&emsp;`RISING` : Detect Rising Edge    
+&emsp;`BOTH` : Detect Both Side    
 
 <h5>&emsp;Methods</h5>  
 
 &emsp;`read()` : Read the Input Device Status    
-&emsp;`setCallback(func,param=None,type=BOTH)` : Set Callback Function When Detect Edge    <br><br>
+&emsp;`setCallback(func,param=None,type=BOTH)` : Set Callback Function When Detect Edge<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
@@ -84,7 +85,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Switch(n)` : Switch Object inheriting from Input Class   <br><br> 
+&emsp;`Switch(n)` : Switch Object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Switch    
 
@@ -95,7 +96,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;`Switches(n)` : Switch Object inheriting from Input Class <br><br>
+&emsp;`Switches(n)` : Switch Object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the Switch    
 
@@ -106,28 +107,32 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`SpiAdc(channel, device=0, bus=0, speed=1000000)` : SpiAdc object <br><br>
+&emsp;`SpiAdc(channel, device=0, bus=0, speed=1000000)` : SpiAdc object <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
 &emsp;&emsp;&emsp;`bus` : Not Used..    
 &emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)  
 			
-&emsp;&emsp;**Definitions**    
-&emsp;&emsp;&emsp;`TYPE_AVERAGE` : Average data based on sampling count    
-&emsp;&emsp;&emsp;`TYPE_NORMAL` : Unaveraged raw data    
-&emsp;&emsp;&emsp;`MODE_FULL` : Call Callback function always    
-&emsp;&emsp;&emsp;`MODE_INCLUSIVE` : If data is in arange(max, min), call Callback function    
-&emsp;&emsp;&emsp;`MODE_EXCLUSIVE` : If data is over arange, call Callback function    
+<h5>&emsp;Definitions</h5>  
+
+&emsp;`TYPE_AVERAGE` : Average data based on sampling count    
+&emsp;`TYPE_NORMAL` : Unaveraged raw data    
+&emsp;`MODE_FULL` : Call Callback function always    
+&emsp;`MODE_INCLUSIVE` : If data is in arange(max, min), call Callback function    
+&emsp;`MODE_EXCLUSIVE` : If data is over arange, call Callback function    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;`setChipSelect(cs)` : Set SPI Chip Select PIN    <br><br>
+&emsp;`getSample()` : Get Sampling Count    
+&emsp;`read()` : Read Data from Device (Raw Type)    
+&emsp;`readAverage()` : Read Average Data from Device    
+&emsp;`run()` : Read data and call Callback function according to mode  
+&emsp;`setChipSelect(cs)` : Set SPI Chip Select PIN<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface
-<br><br>
 
-&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read    <br><br>
+&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
@@ -135,32 +140,23 @@ from pop import *
 &emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
 &emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
 &emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
-<br><br>
 
-&emsp;`setSample(sample)` : Set Sampling Count<br><br>
+
+&emsp;`setSample(sample)` : Set Sampling Count<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sample` : Sampling count
-<br><br>
 
-&emsp;`getSample()` : Get Sampling Count    
 
-&emsp;`read()` : Read Data from Device (Raw Type)    
-
-&emsp;`readAverage()` : Read Average Data from Device    
-
-&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
-<br><br>
 
-&emsp;`readVoltAverage(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+
+&emsp;`readVoltAverage(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
-<br><br>
-
-&emsp;`run()` : Read data and call Callback function according to mode  
 
 ---
 
@@ -169,7 +165,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Psd(channel=-1, device=0, bus=0, speed=1000000)` : PSD object inheriting from SpiAdc Class    <br><br>
+&emsp;`Psd(channel=-1, device=0, bus=0, speed=1000000)` : PSD object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -178,7 +174,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;`calcDist(val,calibration=1.1)` : Calculate distance value from raw data    <br><br>
+&emsp;`calcDist(val,calibration=1.1)` : Calculate distance value from raw data    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : ADC Raw Data    
 &emsp;&emsp;&emsp;`calibration` : Calibration Value, Default 1.1    
@@ -190,7 +186,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Cds(channel=-1, device=0, bus=0, speed=1000000)` : Cds object inheriting from SpiAdc Class<br><br>
+&emsp;`Cds(channel=-1, device=0, bus=0, speed=1000000)` : Cds object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -199,7 +195,7 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>  
 
-&emsp;`setCalibrationPseudoLx(func)` : Set calibration function    <br><br>
+&emsp;`setCalibrationPseudoLx(func)` : Set calibration function<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Calibration function
 <br><br>
@@ -213,7 +209,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Sound(channel=-1, device=0, bus=0, speed=1000000)` : Sound object inheriting from SpiAdc Class    <br><br>
+&emsp;`Sound(channel=-1, device=0, bus=0, speed=1000000)` : Sound object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -227,7 +223,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Vr(channel=-1, device=0, bus=0, speed=1000000)` : Vr object inheriting from SpiAdc Class    <br><br>
+&emsp;`Vr(channel=-1, device=0, bus=0, speed=1000000)` : Vr object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -241,7 +237,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` : Potentiometer object inheriting from SpiAdc Class    <br><br>
+&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` : Potentiometer object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -250,7 +246,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;`setRangeTable(table)` : Set potentiometer range table    <br><br>
+&emsp;`setRangeTable(table)` : Set potentiometer range table<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
 &emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
@@ -267,64 +263,70 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`PiezoBuzzer(n)` : PiezoBuzzer object inheriting from PopThread    
+&emsp;`PiezoBuzzer(n)` : PiezoBuzzer object inheriting from PopThread<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;setTempo(n) : Set tempo value<br><br>
+&emsp;`setTempo(n)` : Set tempo value<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;n : Value to be set to tempo
+&emsp;&emsp;&emsp;`n` : Value to be set to tempo
 <br><br>
 
-&emsp;getTempo() : Get tempo value    
+&emsp;`getTempo()` : Get tempo value    
 
-&emsp;tone(scale,pitch,duration) : Play a note on piezo buzzer during duration value    <br><br>
+&emsp;`tone(scale,pitch,duration)` : Play a note on piezo buzzer during duration value    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`scale` : Scale value to play on piezo buzzer (int type)    
 &emsp;&emsp;&emsp;`pitch` : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12    
 &emsp;&emsp;&emsp;`duration` : Tone is playing during duration value
 <br><br>
 
-&emsp;rest(duration) : Stop to play piezo buzzer    <br><br>
+&emsp;`rest(duration)` : Stop to play piezo buzzer    <br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;duration : The duration of the stopping
+&emsp;&emsp;&emsp;`duration` : The duration of the stopping
 <br><br>
 
-&emsp;play(sheet) : play music by sheet<br><br>
+&emsp;`play(sheet)` : play music by sheet<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;sheet : list [[scale],[pitch],[duration]]
+&emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
 <br><br>
 
-&emsp;isPlay() : return play status    
+&emsp;`isPlay()` : return play status    
 
 ---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
 > Oled Controlled vi I2C Interface    
 
-<h5>&emsp;Initialization</h5>   
-	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
-		**Params**   
-			addr : OLED I2C ADDR.default 0x3c    
-			type : OLED Type. difined board config    
-			automode : select automode. default True    
+<h5>&emsp;Initialization</h5>  
 
-* Definitions    
-	* OLED_SSD1306_I2C_128x32 : OLED device type number, if model name is 'SSD1306', select this type    
-	* OLED_SH1106_I2C_128x64 : OLED device type number, if model name is 'SSH1106', select this type    
-	* BLACK : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
-	* WHITE : Another of them is white. Numeric value is 1    
+&emsp;`Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True)` <br>&emsp;: Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    <br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : OLED I2C ADDR.default 0x3c    
+&emsp;&emsp;&emsp;`type` : OLED Type. difined board config    
+&emsp;&emsp;&emsp;`automode` : select automode. default True    
 
-<h5>&emsp;Methods</h5>   
-	* init(type=OLED_SH1106_I2C_128x64) : Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    
-		**Params**   
-			type : Select OLED type    
-	* print(string) : Print a string on OLED. Replace '\n' to New-Line    
-		**Params**   
-			string: The string to print on OLED    
-	* drawCircle(x0, y0, r, color) : Draw a circle on OLED    
+&emsp;**Definitions**    
+&emsp;&emsp;`OLED_SSD1306_I2C_128x32` : OLED device type number, if model name is 'SSD1306', select this type    
+&emsp;&emsp;`OLED_SH1106_I2C_128x64` : OLED device type number, if model name is 'SSH1106', select this type    
+&emsp;&emsp;`BLACK` : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
+&emsp;&emsp;`WHITE` : Another of them is white. Numeric value is 1    
+
+<h5>&emsp;Methods</h5>
+
+&emsp;`init(type=OLED_SH1106_I2C_128x64)` : Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`type` : Select OLED type
+<br><br>
+
+&emsp;`print(string)` : Print a string on OLED. Replace '\n' to New-Line    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`string`: The string to print on OLED
+<br><br>
+
+&emsp;drawCircle(x0, y0, r, color) : Draw a circle on OLED    
 		**Params**   
 			x0 : Start point of x-axis    
 			y0 : Start point of y-axis    
