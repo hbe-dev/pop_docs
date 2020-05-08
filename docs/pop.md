@@ -548,11 +548,15 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
+&emsp;`display()` : send command from buffer. when Automode False use    
+&emsp;`getRGBType()` : getRGBType    
+&emsp;`RGBtoHEX(color_arr)` : convert RGB list data to HEX  
+&emsp;`clear()` : clear PixelDisplay  
+&emsp;`rainbow()` : display rainbow color on Pixel Display  
 &emsp;`fill(color_arr)` : Fill PixelDisplay to one color    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`color_arr` : A color to be filled. Type is list of [R, G, B]  
-
-&emsp;`clear()` : clear PixelDisplay    
+   
 &emsp;`setColor(x, y, color_arr)` : set PixelDisplay color_arr on x,y    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis    
@@ -567,15 +571,11 @@ from pop import *
 &emsp;`setAutomode(automode)` : set automode. default True. if False set, shuld use display()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
-
-&emsp;`rainbow()` : display rainbow color on Pixel Display    
+   
 &emsp;`setBrightness(brightness)` : set Brightness    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`brightness` : brightness (0~255)    
-
-&emsp;`display()` : send command from buffer. when Automode False use    
-&emsp;`getRGBType()` : getRGBType    
-&emsp;`RGBtoHEX(color_arr)` : convert RGB list data to HEX    
+  
 &emsp;`setColorInvert(invert)` : inver color. default False    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`invert`  
