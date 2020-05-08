@@ -1,5 +1,6 @@
 site_name: Pop Description
 theme: readthedocs
+extra_css: [extra.css]
 nav:
     - Home: index.md
     - Pop : pop.md
