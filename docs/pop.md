@@ -17,11 +17,12 @@ from pop import *
 
 &emsp; `Out(n)` : Out Object  <br><br>
 &emsp;**Params**    
-&emsp;&emsp;n : GPIO Number Connected to the Output Device
+&emsp;&emsp;`n` : GPIO Number Connected to the Output Device
 
 <h5>&emsp;Methods</h5>
+
 &emsp; `on()`
-		: Set GPIO Connected to Output Device to HIGH    
+		: Set GPIO Connected to Output Device to HIGH  
 &emsp; `off()` 
 		: Set GPIO Connected to Output Device to LOW   
 <br><br>
