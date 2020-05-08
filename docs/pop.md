@@ -1,41 +1,46 @@
 <h1> Pop </h1>
 The code to import the whole of Pop Library : 
 
-```
+```python
 from pop import *
 ```
-<br><br>
+<br>
 
-# Class & Method Description    
+<!-- # Class & Method Description-->
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
 
 > Output device controlled throught GPIO
 
-**Examples Use**
+>**Object Initialize**
+>
+> ```
+> Out(n) : Out Object  
+> ```
+>
+> >Params    
+> n : GPIO Number Connected to the Output Device
 
-    Out(n) : Out Object    
-    Params    
-		n : GPIO Number Connected to the Output Device    
-**Methods**    
+>**Methods**
+>
+> `on()`
+>		: Set GPIO Connected to Output Device to HIGH    
+>
+> `off()` 
+>		: Set GPIO Connected to Output Device to LOW   
 
-    on()    
-		: Set GPIO Connected to Output Device to HIGH    
-    off()    
-		: Set GPIO Connected to Output Device to LOW   
-         
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
 > LEDs are controlled via GPIO    
 
-* Example Use    
+* Object Initialize    
 	* Led(n) : Led Object inheriting from Out Class    
 		* Params    
 			n : GPIO Number Connected to the LED    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
 > LEDs are controlled via GPIO    
 
-* Example Use    
+* Object Initialize    
 	* Leds(n) : Leds Object inheriting from Led Class    
 		* Params    
 			n : list Number defined board config Connected to the LED    
@@ -50,7 +55,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
 > Read the Input Device through GPIO    
 
-* Example Use    
+* Object Initialize    
 	* Input(n,activeHigh=Ture) : Input Object    
 		* Params    
 			n : GPIO Number Connected to the Input Device    
@@ -72,7 +77,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
 > Read the switch status through GPIO    
 
-* Example Use    
+* Object Initialize    
 	* Switch(n) : Switch Object inheriting from Input Class    
 		* Params    
 			n : GPIO Number Connected to the Switch    
@@ -80,7 +85,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
 > Read the switch status through GPIO    
 
-* Example Use    
+* Object Initialize    
 	* Switches(n) : Switch Object inheriting from Input Class    
 		* Params    
 			n : list Number defined board config Connected to the Switch    
@@ -90,7 +95,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
 > adc chip control through spi interface    
 
-* Example Use    
+* Object Initialize    
 	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
 		* Params    
 			channel : ADC Channel    
@@ -136,7 +141,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
 > Distance measurement using PSD sensor    
 
-* Example Use    
+* Object Initialize    
 	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
 		* Params    
 			channel : ADC Channel    
@@ -153,7 +158,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
 > Light measurement using CDS sensor    
 
-* Example Use    
+* Object Initialize    
 	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
 		* Params    
 			channel : ADC Channel    
@@ -170,7 +175,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
 > Ambient sound measurement using Sound sensor    
 
-* Example Use    
+* Object Initialize    
 	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
 		* Params    
 			channel : ADC Channel    
@@ -181,7 +186,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
 > Voltage measurement with variable resistor    
 
-* Example Use    
+* Object Initialize    
 	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
 		* Params    
 			channel : ADC Channel    
@@ -192,7 +197,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
 > Voltage measurement with variable resistor    
 
-* Example Use    
+* Object Initialize    
 	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
 		* Params    
 			channel : ADC Channel    
@@ -212,7 +217,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PiezoBuzzer**    
 * Class Description  : PiezoBuzzer controlled via Software PWM    
-* Example Use    
+* Object Initialize    
 	* PiezoBuzzer(n) : PiezoBuzzer object inheriting from PopThread    
 		* Params    
 			n : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
@@ -240,7 +245,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
 > Oled Controlled vi I2C Interface    
 
-* Example Use    
+* Object Initialize    
 	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
 		* Params    
 			addr : OLED I2C ADDR.default 0x3c    
@@ -418,7 +423,7 @@ from pop import *
 
 > Apds9960 Controlled via I2C Interface    
 
-* Example Use    
+* Object Initialize    
 	* Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
 * Methods    
