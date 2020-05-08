@@ -1,5 +1,5 @@
 <h1> Pop </h1>
-You can import the whole of Pop Library through the code : 
+The code to import the whole of Pop Library : 
 
 ```
 from pop import *
