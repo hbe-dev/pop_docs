@@ -13,16 +13,14 @@ from pop import *
 
 > Output device controlled throught GPIO
 
-<br>
-
-&emsp; **Object Initialize**
+<h4>&emsp; Object Initialize</h4>
 
 &emsp; `Out(n)` : Out Object  
 
 &emsp; Params    
 &emsp; &emsp;  n : GPIO Number Connected to the Output Device
 
-&emsp; **Methods**
+<h4>&emsp; Methods</h4>
 
 &emsp; `on()`
 		: Set GPIO Connected to Output Device to HIGH    
