@@ -64,9 +64,9 @@ from pop import *
 &emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default True    
 
 &emsp;&emsp;**Defines**    
-&emsp;&emsp;&emsp;FALLING : Detect Falling Edge    
-&emsp;&emsp;&emsp;RISING : Detect Rising Edge    
-&emsp;&emsp;&emsp;BOTH : Detect Both Side    
+&emsp;&emsp;&emsp;`FALLING` : Detect Falling Edge    
+&emsp;&emsp;&emsp;`RISING` : Detect Rising Edge    
+&emsp;&emsp;&emsp;`BOTH` : Detect Both Side    
 
 <h5>&emsp;Methods</h5>  
 
@@ -76,7 +76,7 @@ from pop import *
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
 &emsp;&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH  
-  
+
 ---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
@@ -84,37 +84,41 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-	* Switch(n) : Switch Object inheriting from Input Class    
-		**Params**   
-			n : GPIO Number Connected to the Switch    
+&emsp;Switch(n) : Switch Object inheriting from Input Class   <br><br> 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Switch    
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
 > Read the switch status through GPIO    
 
-<h5>&emsp;Initialization</h5>   
-	* Switches(n) : Switch Object inheriting from Input Class    
-		**Params**   
-			n : list Number defined board config Connected to the Switch    
+<h5>&emsp;Initialization</h5>
 
-<hr/>
+&emsp;`Switches(n)` : Switch Object inheriting from Input Class <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the Switch    
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
 > adc chip control through spi interface    
 
 <h5>&emsp;Initialization</h5>   
-	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)  
+
+&emsp;`SpiAdc(channel, device=0, bus=0, speed=1000000)` : SpiAdc object <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)  
 			
-* Defines    
-	* TYPE_AVERAGE : Average data based on sampling count    
-	* TYPE_NORMAL : Unaveraged raw data    
-	* MODE_FULL : Call Callback function always    
-	* MODE_INCLUSIVE : If data is in arange(max, min), call Callback function    
-	* MODE_EXCLUSIVE : If data is over arange, call Callback function    
+&emsp;&emsp;**Defines**    
+&emsp;&emsp;&emsp;`TYPE_AVERAGE` : Average data based on sampling count    
+&emsp;&emsp;&emsp;`TYPE_NORMAL` : Unaveraged raw data    
+&emsp;&emsp;&emsp;`MODE_FULL` : Call Callback function always    
+&emsp;&emsp;&emsp;`MODE_INCLUSIVE` : If data is in arange(max, min), call Callback function    
+&emsp;&emsp;&emsp;`MODE_EXCLUSIVE` : If data is over arange, call Callback function    
 
 <h5>&emsp;Methods</h5>   
 	* setChipSelect(cs) : Set SPI Chip Select PIN    
