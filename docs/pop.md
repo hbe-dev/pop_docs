@@ -132,16 +132,6 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface
 
-&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read<br>
-&emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
-&emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
-&emsp;&emsp;&emsp;`type` : Data Read Type , Default TYPE_AVERAGE    
-&emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
-&emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
-&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
-
-
 &emsp;`setSample(sample)` : Set Sampling Count<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sample` : Sampling count
@@ -157,6 +147,15 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
+
+&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
+&emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
+&emsp;&emsp;&emsp;`type` : Data Read Type , Default TYPE_AVERAGE    
+&emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
+&emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
+&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
 
 ---
 
@@ -195,12 +194,10 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>  
 
+&emsp;`readAverage()` : Read lux data from device and calibration function  
 &emsp;`setCalibrationPseudoLx(func)` : Set calibration function<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Calibration function
-<br><br>
-
-&emsp;`readAverage()` : Read lux data from device and calibration function    
 
 ---
 
@@ -237,7 +234,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` : Potentiometer object inheriting from SpiAdc Class<br>
+&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` <br>&emsp;: Potentiometer object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -245,16 +242,13 @@ from pop import *
 &emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
 
 <h5>&emsp;Methods</h5>   
-
+  
+&emsp;`readAverage()` : return level from range table   
+&emsp;`getRangeTable()` : return range table  
 &emsp;`setRangeTable(table)` : Set potentiometer range table<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
 &emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
-<br><br>
-
-&emsp;`getRangeTable()` : return range table    
-
-&emsp;`readAverage()` : return level from range table    
 
 ---
 
@@ -269,31 +263,25 @@ from pop import *
 
 <h5>&emsp;Methods</h5>   
 
+&emsp;`isPlay()` : return play status  
+&emsp;`getTempo()` : Get tempo value  
 &emsp;`setTempo(n)` : Set tempo value<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : Value to be set to tempo
-<br><br>
-
-&emsp;`getTempo()` : Get tempo value    
 
 &emsp;`tone(scale,pitch,duration)` : Play a note on piezo buzzer during duration value    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`scale` : Scale value to play on piezo buzzer (int type)    
 &emsp;&emsp;&emsp;`pitch` : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12    
 &emsp;&emsp;&emsp;`duration` : Tone is playing during duration value
-<br><br>
 
 &emsp;`rest(duration)` : Stop to play piezo buzzer    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`duration` : The duration of the stopping
-<br><br>
 
 &emsp;`play(sheet)` : play music by sheet<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
-<br><br>
-
-&emsp;`isPlay()` : return play status    
 
 ---
 
@@ -309,174 +297,198 @@ from pop import *
 &emsp;&emsp;&emsp;`automode` : select automode. default True    
 
 &emsp;**Definitions**    
-&emsp;&emsp;`OLED_SSD1306_I2C_128x32` : OLED device type number, if model name is 'SSD1306', select this type    
-&emsp;&emsp;`OLED_SH1106_I2C_128x64` : OLED device type number, if model name is 'SSH1106', select this type    
-&emsp;&emsp;`BLACK` : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
-&emsp;&emsp;`WHITE` : Another of them is white. Numeric value is 1    
+&emsp;`OLED_SSD1306_I2C_128x32` : OLED device type number, if model name is 'SSD1306', select this type    
+&emsp;`OLED_SH1106_I2C_128x64` : OLED device type number, if model name is 'SSH1106', select this type    
+&emsp;`BLACK` : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
+&emsp;`WHITE` : Another of them is white. Numeric value is 1    
 
 <h5>&emsp;Methods</h5>
 
-&emsp;`init(type=OLED_SH1106_I2C_128x64)` : Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
+&emsp;`width()` : Retun widht of OLED    
+&emsp;`height()` : Return height of OLED   
+&emsp;`display()` : Display buffer data on OLED    
+&emsp;`clearDisplay()` : Clear the data on OLED    
+&emsp;`init(type=OLED_SH1106_I2C_128x64)` <br>&emsp;: Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`type` : Select OLED type
-<br><br>
 
 &emsp;`print(string)` : Print a string on OLED. Replace '\n' to New-Line    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`string`: The string to print on OLED
-<br><br>
 
-&emsp;drawCircle(x0, y0, r, color) : Draw a circle on OLED    
-		**Params**   
-			x0 : Start point of x-axis    
-			y0 : Start point of y-axis    
-			r : Radious of the circle    
-			color : The color of a circle. BLACK(0) or WHITE(1)    
-	* fillCircle(x0, y0, r, color) : Draw a filled circle on OLED    
-		**Params**   
-			x0 : Start point of x-axis    
-			y0 : Start point of y-axis    
-			r : Radious of the circle    
-			color : The color of a circle. BLACK(0) or WHITE(1)    
-	* drawLine(x0, y0, x1, y1, color) : Draw a line on OLED    
-		**Params**   
-			x0 : Start point of x-axis    
-			y0 : Start point of y-axis    
-			x1 : End point of x-axis    
-			y1 : End point of y-axis    
-			color : The color of a line. BLACK(0) or WHITE(1)    
-	* drawRect(x, y, w, h, color) : Draw a rectangle on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Width of the rectangle    
-			h : Height of the rectangle    
-			color : The color of a rectangle. BLACK(0) or WHITE(1)    
-	* fillRect(x, y, w, h, color) : Draw a filled rectangle on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Width of the rectangle    
-			h : Height of the rectangle    
-			color : The color of a rectangle. BLACK(0) or WHITE(1)    
-	* drawVerticalBargraph(x, y, w, h, color, percent) : Draw a graph on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Width of the graph    
-			h : Full height of the graph    
-			color : The color of the graph. BLACK(0) or WHITE(1)    
-			percent : The percentage of a graph. The direction of graph is always up-side    
-	* drawHorizontalBargraph(x, y, w, h, color, percent) : Draw a graph on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Full width of the graph    
-			h : Height of the graph    
-			color : The color of the graph. BLACK(0) or WHITE(1)    
-			percent : The percentage of a graph. The direction of graph is always right-side    
-	* drawRoundRect(x, y, w, h, r, color) : Draw a rounded rectangle on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Width of the rounded rectangle    
-			h : Height of the rounded rectangle    
-			r : Curvature of edge of the rounded rectangle    
-			color : The color of a graph. BLACK(0) or WHITE(1)    
-	* fillRoundRect(x, y, w, h, r, color) : Draw a rounded and filled rectangle on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			w : Width of the rounded rectangle    
-			h : Height of the rounded rectangle    
-			r : Curvature of edge of the rounded rectangle    
-			color : The color of a graph BLACK(0) or WHITE(1)    
-	* drawTriangle(x0, y0, x1, y1, x2, y2, color) : Draw a triangle on OLED    
-		**Params**   
-			x0 : First point of x-axis    
-			y0 : First point of y-axis    
-			x1 : Second point of x-axis    
-			y1 : Second point of y-axis    
-			x2 : Third point of x-axis    
-			y2 : Third point of y-axis    
-			color : The color of a triangle. BLACK(0) or WHITE(1)    
-	* fillTriangle(x0, y0, x1, y1, x2, y2, color) : Draw a filled triangle on OLED    
-		**Params**   
-			x0 : First point of x-axis    
-			y0 : First point of y-axis    
-			x1 : Second point of x-axis    
-			y1 : Second point of y-axis    
-			x2 : Third point of x-axis    
-			y2 : Third point of y-axis    
-			color : The color of a triangle. BLACK(0) or WHITE(1)    
-	* drawChar(x, y, c, color, bg, size) : Draw a character on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of x-axis    
-			c : A character to be drawn    
-			color : The color of a character. BLACK(0) or WHITE(1)    
-			bg : The background of a character. Background size is 6 * 8 * textsize    
-			size : Pixel size of charactor strock. Default is 1    
-	* drawBitmap(x, y, bitmap, w, h, color) : Draw a bitmap data on OLED    
-		**Params**   
-			x : Start point of x-axis    
-			y : Start point of y-axis    
-			bitmap : A two dimensional array which consist of 0 and 1, 0 is black and 1 is white    
-			w : Width of bitmap data    
-			h : Height of bitmap data    
-			color : The color of a character. BLACK(0) or WHITE(1)    
-	* setCursor(x, y) : Set the cursor on OLED, This value is used in write()    
-		**Params**   
-			x : x-axis point of cursor    
-			y : y-axis point of cursor    
-	* setTextSize(s) : Set text size, This value is used in write()    
-		**Params**   
-			s : Pixel size of charactor strock. Default is 1    
-	* setTextColor(c) : Set text color, This value is used in write()    
-		**Params**   
-			c : Text color value. BLACK(0) or WHITE(1)    
-	* setTextColorWithBg(c, b) : Set text color and background color, This value is used in write()    
-		**Params**   
-			c : Text color value. BLACK(0) or WHITE(1)    
-			b : Background color value. BLACK(0) or WHITE(1)    
-	* width() : Retun widht of OLED    
-	* height() : Return height of OLED    
-	* drawPixel(x, y, color) : Draw a dot on OLED    
-		**Params**   
-			x : The point of a dot    
-			y : The point of a dot    
-			color : The color of a dot    
-	* setBrightness(Brightness) : Set brightness of OLED    
-		**Params**   
-			Brightness : Brightness value to be set    
-	* invertDisplay(i) : Change display mode    
-		**Params**   
-			i : If i is True, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    
-	* istartscrollright(start, stop) : Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
-		**Params**   
-			start : Start point of scrolling    
-			stop : Stop point of scrolling    
-	* startscrollleft(start, stop) : Scroll the screen in the row-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
-		**Params**   
-			start : Start point of scrolling    
-			stop : Stop point of scrolling    
-	* startscrolldiagright(start, stop) : Scroll the screen in the column-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
-		**Params**   
-			start : Start point of scrolling    
-			stop : Stop point of scrolling    
-	* startscrolldiagleft(start, stop) : Scroll the screen in the column-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
-		**Params**   
-			start : Start point of scrolling    
-			stop : Stop point of scrolling    
-	* stopscroll() : Stop scrolling the screen    
-	* display() : Display buffer data on OLED    
-	* clearDisplay() : Clear the data on OLED    
-	* write(c) : Write the character at location of cursor on OLED    
-		**Params**   
-			c : The character to be written    
-	* setAutomode(automode) : set automode    
-		**Params**   
-			automode : True or False    
+&emsp;`drawCircle(x0, y0, r, color)` : Draw a circle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x0` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y0` : Start point of y-axis    
+&emsp;&emsp;&emsp;`r` : Radious of the circle    
+&emsp;&emsp;&emsp;`color` : The color of a circle. BLACK(0) or WHITE(1)    
+
+&emsp;`fillCircle(x0, y0, r, color)` : Draw a filled circle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x0` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y0` : Start point of y-axis    
+&emsp;&emsp;&emsp;`r` : Radious of the circle    
+&emsp;&emsp;&emsp;`color` : The color of a circle. BLACK(0) or WHITE(1)   
+
+&emsp;`drawLine(x0, y0, x1, y1, color)` : Draw a line on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x0` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y0` : Start point of y-axis    
+&emsp;&emsp;&emsp;`x1` : End point of x-axis    
+&emsp;&emsp;&emsp;`y1` : End point of y-axis    
+&emsp;&emsp;&emsp;`color` : The color of a line. BLACK(0) or WHITE(1)    
+
+&emsp;`drawRect(x, y, w, h, color)` : Draw a rectangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Width of the rectangle    
+&emsp;&emsp;&emsp;`h` : Height of the rectangle    
+&emsp;&emsp;&emsp;`color` : The color of a rectangle. BLACK(0) or WHITE(1)   
+
+&emsp;`fillRect(x, y, w, h, color)` : Draw a filled rectangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Width of the rectangle    
+&emsp;&emsp;&emsp;`h` : Height of the rectangle    
+&emsp;&emsp;&emsp;`color` : The color of a rectangle. BLACK(0) or WHITE(1)    
+
+&emsp;`drawVerticalBargraph(x, y, w, h, color, percent)` : Draw a graph on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Width of the graph    
+&emsp;&emsp;&emsp;`h` : Full height of the graph    
+&emsp;&emsp;&emsp;`color` : The color of the graph. BLACK(0) or WHITE(1)    
+&emsp;&emsp;&emsp;`percent` : The percentage of a graph. The direction of graph is always up-side    
+
+&emsp;`drawHorizontalBargraph(x, y, w, h, color, percent)` : Draw a graph on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Full width of the graph    
+&emsp;&emsp;&emsp;`h` : Height of the graph    
+&emsp;&emsp;&emsp;`color` : The color of the graph. BLACK(0) or WHITE(1)    
+&emsp;&emsp;&emsp;`percent` : The percentage of a graph. The direction of graph is always right-side    
+
+&emsp;`drawRoundRect(x, y, w, h, r, color)` : Draw a rounded rectangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Width of the rounded rectangle    
+&emsp;&emsp;&emsp;`h` : Height of the rounded rectangle    
+&emsp;&emsp;&emsp;`r` : Curvature of edge of the rounded rectangle    
+&emsp;&emsp;&emsp;`color` : The color of a graph. BLACK(0) or WHITE(1)   
+
+&emsp;`fillRoundRect(x, y, w, h, r, color)` : Draw a rounded and filled rectangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`w` : Width of the rounded rectangle    
+&emsp;&emsp;&emsp;`h` : Height of the rounded rectangle    
+&emsp;&emsp;&emsp;`r` : Curvature of edge of the rounded rectangle    
+&emsp;&emsp;&emsp;`color` : The color of a graph BLACK(0) or WHITE(1)   
+
+&emsp;`drawTriangle(x0, y0, x1, y1, x2, y2, color)` : Draw a triangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x0` : First point of x-axis    
+&emsp;&emsp;&emsp;`y0` : First point of y-axis    
+&emsp;&emsp;&emsp;`x1` : Second point of x-axis    
+&emsp;&emsp;&emsp;`y1` : Second point of y-axis    
+&emsp;&emsp;&emsp;`x2` : Third point of x-axis    
+&emsp;&emsp;&emsp;`y2` : Third point of y-axis    
+&emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)    
+
+&emsp;`fillTriangle(x0, y0, x1, y1, x2, y2, color)` : Draw a filled triangle on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x0` : First point of x-axis    
+&emsp;&emsp;&emsp;`y0` : First point of y-axis    
+&emsp;&emsp;&emsp;`x1` : Second point of x-axis    
+&emsp;&emsp;&emsp;`y1` : Second point of y-axis    
+&emsp;&emsp;&emsp;`x2` : Third point of x-axis    
+&emsp;&emsp;&emsp;`y2` : Third point of y-axis    
+&emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)
+   
+&emsp;`drawChar(x, y, c, color, bg, size)` : Draw a character on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of x-axis    
+&emsp;&emsp;&emsp;`c` : A character to be drawn    
+&emsp;&emsp;&emsp;`color` : The color of a character. BLACK(0) or WHITE(1)    
+&emsp;&emsp;&emsp;`bg` : The background of a character. Background size is 6 * 8 * textsize    
+&emsp;&emsp;&emsp;`size` : Pixel size of charactor strock. Default is 1   
+
+&emsp;`drawBitmap(x, y, bitmap, w, h, color)` : Draw a bitmap data on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : Start point of x-axis    
+&emsp;&emsp;&emsp;`y` : Start point of y-axis    
+&emsp;&emsp;&emsp;`bitmap` : A two dimensional array which consist of 0 and 1, 0 is black and 1 is white    
+&emsp;&emsp;&emsp;`w` : Width of bitmap data    
+&emsp;&emsp;&emsp;`h` : Height of bitmap data    
+&emsp;&emsp;&emsp;`color` : The color of a character. BLACK(0) or WHITE(1)   
+
+&emsp;`setCursor(x, y)` : Set the cursor on OLED, This value is used in write()    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : x-axis point of cursor    
+&emsp;&emsp;&emsp;`y` : y-axis point of cursor 
+
+&emsp;`setTextSize(s)` : Set text size, This value is used in write()    
+&emsp;&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`s` : Pixel size of charactor strock. Default is 1 
+
+&emsp;`setTextColor(c)` : Set text color, This value is used in write()    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`c` : Text color value. BLACK(0) or WHITE(1)   
+
+&emsp;`setTextColorWithBg(c, b)` : Set text color and background color, This value is used in write()    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`c` : Text color value. BLACK(0) or WHITE(1)    
+&emsp;&emsp;&emsp;`b` : Background color value. BLACK(0) or WHITE(1) 
+
+&emsp;`drawPixel(x, y, color)` : Draw a dot on OLED    
+&emsp;&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : The point of a dot    
+&emsp;&emsp;&emsp;`y` : The point of a dot    
+&emsp;&emsp;&emsp;`color` : The color of a dot    
+
+&emsp;`setBrightness(Brightness)` : Set brightness of OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`Brightness` : Brightness value to be set   
+
+&emsp;`invertDisplay(i)` : Change display mode    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`i` : If i is True, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    
+
+&emsp;`istartscrollright(start, stop)` <br>&emsp;: Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`start` : Start point of scrolling    
+&emsp;&emsp;&emsp;`stop` : Stop point of scrolling   
+
+&emsp;`startscrollleft(start, stop)` <br>&emsp;: Scroll the screen in the row-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`start` : Start point of scrolling    
+&emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
+
+&emsp;`startscrolldiagright(start, stop)` <br>&emsp;: Scroll the screen in the column-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`start` : Start point of scrolling    
+&emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
+
+&emsp;`startscrolldiagleft(start, stop)` <br>&emsp;: Scroll the screen in the column-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`start` : Start point of scrolling    
+&emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
+
+&emsp;`stopscroll()` : Stop scrolling the screen    
+
+&emsp;`write(c)` : Write the character at location of cursor on OLED    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`c` : The character to be written   
+
+&emsp;`setAutomode(automode)` : set automode    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`automode` : True or False    
 
 <hr/>
 
@@ -485,68 +497,85 @@ from pop import *
 > Apds9960 Controlled via I2C Interface    
 
 <h5>&emsp;Initialization</h5>   
-	* Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
+
+&emsp;`Gesture(addr=APDS9960_ADDR)` : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
 <h5>&emsp;Methods</h5>   
-	* isAvailable() : return Gesture detection status(1). Wait until Gesture is detected    
-	* read() : return number as Gesture status.    
-		0 : "None" , 1 : "Left", 2 : "Right", 3 : "Up", 4 : "Down", 5: "Near", 6 : "Far"    
-	* readStr() : return String as Gesture status.    
-		"None" , "Left", "Right", "Up", "Down", "Near", "Far"    
+
+&emsp;`isAvailable()` : return Gesture detection status(1). Wait until Gesture is detected    
+&emsp;`read()` : return number as Gesture status.  
+&emsp;&emsp;**Return**    
+&emsp;&emsp;&emsp;`0` : "None" , `1` : "Left", `2` : "Right", `3` : "Up", `4` : "Down", `5`: "Near", `6` : "Far"    
+
+&emsp;`readStr()` : return String as Gesture status.    
+&emsp;&emsp;**Return**  
+&emsp;&emsp;&emsp;"None" , "Left", "Right", "Up", "Down", "Near", "Far"    
 		
-* Inner class Light    
-	* Light() : Light object    
-	<h5>&emsp;Methods</h5>   
-		* read() : return light value    
-		
-* Inner class Color    
-	* Color() : Color object    
-	<h5>&emsp;Methods</h5>   
-		* readRed() : return Red value    
-		* readGreen() : return Green value    
-		* readBlue() : return Blue value    
-* Inner class Proximity    
-	* Proximity() : Proximity object    
-	<h5>&emsp;Methods</h5>   
-		* read() : return Proximity value    
+<h5>&emsp;Inner Class</h5>  
+
+&emsp;**Light**    
+&emsp;&emsp;`Light()` : Light object  <br><br>
+&emsp;&emsp;**Methods**<br>
+&emsp;&emsp;`read()` : return light value    
+
+&emsp;**Color**    
+&emsp;&emsp;`Color()` : Color object  <br><br>
+&emsp;&emsp;**Methods**<br>
+&emsp;&emsp;`readRed()` : return Red value    
+&emsp;&emsp;`readGreen()` : return Green value    
+&emsp;&emsp;`readBlue()` : return Blue value
+
+&emsp;**Proximity**  
+&emsp;&emsp;`Proximity()` : Proximity object  <br><br>
+&emsp;&emsp;**Methods**<br>
+&emsp;&emsp;`read()` : return Proximity value    
 	
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PixelDisplay**    
 > Pixel Display controlled via Hardware PWM  
   
-* PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    
-	**Params**   
-		width : Number of Pixel width    
-		height : Number of Pixel height    
-		automode : automode setting. True/False    
+<h5>&emsp;Initialization</h5> 
 
-<h5>&emsp;Methods</h5>   
-	* fill(color_arr) : Fill PixelDisplay to one color    
-		**Params**   
-			color_arr : A color to be filled. Type is list of [R, G, B]    
-	* clear() : clear PixelDisplay    
-	* setColor(x, y, color_arr) : set PixelDisplay color_arr on x,y    
-		**Params**   
-			x : x-axis    
-			y : y-axis    
-			color_arr : A color to be set. Type is list of [R, G, B] or HEX (0xRRGGBB)    
-	* getColor(x, y) : return color on x,y as INT type    
-		**Params**   
-			x : x-axis    
-			y : y-axis    
-	* setAutomode(automode) : set automode. default True. if False set, shuld use display()    
-		**Params**   
-			automode : True or False    
-	* rainbow() : display rainbow color on Pixel Display    
-	* setBrightness(brightness) : set Brightness    
-		**Params**   
-			brightness : brightness (0~255)    
-	* display() : send command from buffer. when Automode False use    
-	* getRGBType() : getRGBType    
-	* RGBtoHEX(color_arr) : convert RGB list data to HEX    
-	* setColorInvert(invert) : inver color. default False    
-		**Params**   
-			invert = True : input (255,0,0) -> (0,255,255)    
-			invert = False : input (255,0,0) -> (255,0,0)    
+&emsp;`PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False)` <br>&emsp;: PixelDisplay object    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`width` : Number of Pixel width    
+&emsp;&emsp;&emsp;`height` : Number of Pixel height    
+&emsp;&emsp;&emsp;`automode` : automode setting. True/False    
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;`fill(color_arr)` : Fill PixelDisplay to one color    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`color_arr` : A color to be filled. Type is list of [R, G, B]  
+
+&emsp;`clear()` : clear PixelDisplay    
+&emsp;`setColor(x, y, color_arr)` : set PixelDisplay color_arr on x,y    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : x-axis    
+&emsp;&emsp;&emsp;`y` : y-axis    
+&emsp;&emsp;&emsp;`color_arr` : A color to be set. Type is list of [R, G, B] or HEX (0xRRGGBB)    
+
+&emsp;`getColor(x, y)` : return color on x,y as INT type    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : x-axis    
+&emsp;&emsp;&emsp;`y` : y-axis 
+
+&emsp;`setAutomode(automode)` : set automode. default True. if False set, shuld use display()    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`automode` : `True` or `False`    
+
+&emsp;`rainbow()` : display rainbow color on Pixel Display    
+&emsp;`setBrightness(brightness)` : set Brightness    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`brightness` : brightness (0~255)    
+
+&emsp;`display()` : send command from buffer. when Automode False use    
+&emsp;`getRGBType()` : getRGBType    
+&emsp;`RGBtoHEX(color_arr)` : convert RGB list data to HEX    
+&emsp;`setColorInvert(invert)` : inver color. default False    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`invert`  
+&emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
+&emsp;&emsp;&emsp;&emsp;`False` : input (255,0,0) -> (255,0,0)    
 
