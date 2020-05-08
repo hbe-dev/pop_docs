@@ -1,4 +1,4 @@
-# Pop
+<h1> Pop </h1>
 You can import the whole of Pop Library through the code : 
 
 ```
@@ -11,7 +11,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
 
-<pre> Output device controlled throught GPIO </pre>
+> Output device controlled throught GPIO
 
 * Examples Use    
 	* Out(n) : Out Object    
@@ -23,7 +23,7 @@ from pop import *
 	* off()    
 		: Set GPIO Connected to Output Device to LOW    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
->> LEDs are controlled via GPIO    
+> LEDs are controlled via GPIO    
 
 * Example Use    
 	* Led(n) : Led Object inheriting from Out Class    
