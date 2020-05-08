@@ -7,7 +7,7 @@
 	* Out(n) : Out Object    
 		* Params    
 			n : GPIO Number Connected to the Output Device    
-* Functions    
+* Methods    
 	* on()    
 		: Set GPIO Connected to Output Device to HIGH    
 	* off()    
@@ -24,7 +24,7 @@
 	* Leds(n) : Leds Object inheriting from Led Class    
 		* Params    
 			n : list Number defined board config Connected to the LED    
-* Functions    
+* Methods    
 	* allOn()    
 		: Set all GPIO Connected to Output Device to HIGH    
 	* allOff()    
@@ -44,7 +44,7 @@
 	* RISING : Detect Rising Edge    
 	* BOTH : Detect Both Side    
 
-* Functions    
+* Methods    
 	* read() : Read the Input Device Status    
 	* setCallback(func,param=None,type=BOTH) : Set Callback Function When Detect Edge    
 		* Params    
@@ -84,7 +84,7 @@
 	* MODE_INCLUSIVE : If data is in arange(max, min), call Callback function    
 	* MODE_EXCLUSIVE : If data is over arange, call Callback function    
 
-* Functions    
+* Methods    
 	* setChipSelect(cs) : Set SPI Chip Select PIN    
 		* Params    
 			cs : Chipselect GPIO for SPI Interface    
@@ -122,7 +122,7 @@
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 
-* Functions    
+* Methods    
 	* calcDist(val,calibration=1.1) : Calculate distance value from raw data    
 		* Params    
 			val : ADC Raw Data    
@@ -138,7 +138,7 @@
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-* Functions    
+* Methods    
 	* setCalibrationPseudoLx(func) : Set calibration function    
 		* Params    
 			func : Calibration function    
@@ -174,7 +174,7 @@
 			bus : Not Used..    
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 
-* Functions    
+* Methods    
 	* setRangeTable(table) : Set potentiometer range table    
 		* Params    
 			table : Table with 10 elements    
@@ -190,7 +190,7 @@
 		* Params    
 			n : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
 
-* Functions    
+* Methods    
 	* setTempo(n) : Set tempo value    
 		* Params    
 			n : Value to be set to tempo    
@@ -212,7 +212,7 @@
 ##   Class Oled    
 * Class Description : Oled Controlled vi I2C Interface    
 * Example Use    
-	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This function calls init(), clearDisplay()    
+	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
 		* Params    
 			addr : OLED I2C ADDR.default 0x3c    
 			type : OLED Type. difined board config    
@@ -224,8 +224,8 @@
 	* BLACK : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
 	* WHITE : Another of them is white. Numeric value is 1    
 
-* Functions    
-	* init(type=OLED_SH1106_I2C_128x64) : Initialize OLED and set width/height of OLED. This function calls setTextSize(), setTextColor(), clearDisplay()    
+* Methods    
+	* init(type=OLED_SH1106_I2C_128x64) : Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    
 		* Params    
 			type : Select OLED type    
 	* print(string) : Print a string on OLED. Replace '\n' to New-Line    
@@ -390,7 +390,7 @@
 * Example Use    
 	* Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
-* Functions    
+* Methods    
 	* isAvailable() : return Gesture detection status(1). Wait until Gesture is detected    
 	* read() : return number as Gesture status.    
 		0 : "None" , 1 : "Left", 2 : "Right", 3 : "Up", 4 : "Down", 5: "Near", 6 : "Far"    
@@ -399,18 +399,18 @@
 		
 * Inner class Light    
 	* Light() : Light object    
-	* Functions    
+	* Methods    
 		* read() : return light value    
 		
 * Inner class Color    
 	* Color() : Color object    
-	* Functions    
+	* Methods    
 		* readRed() : return Red value    
 		* readGreen() : return Green value    
 		* readBlue() : return Blue value    
 * Inner class Proximity    
 	* Proximity() : Proximity object    
-	* Functions    
+	* Methods    
 		* read() : return Proximity value    
 	
 <hr/>
@@ -422,7 +422,7 @@
 			height : Number of Pixel height    
 			automode : automode setting. True/False    
 
-* Functions    
+* Methods    
 	* fill(color_arr) : Fill PixelDisplay to one color    
 		* Params    
 			color_arr : A color to be filled. Type is list of [R, G, B]    
