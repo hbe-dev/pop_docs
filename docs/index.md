@@ -10,7 +10,9 @@ from pop import *
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
-> Output device controlled throught GPIO    
+
+>> Output device controlled throught GPIO
+
 * Examples Use    
 	* Out(n) : Out Object    
 		* Params    
@@ -22,12 +24,14 @@ from pop import *
 		: Set GPIO Connected to Output Device to LOW    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
 > LEDs are controlled via GPIO    
+
 * Example Use    
 	* Led(n) : Led Object inheriting from Out Class    
 		* Params    
 			n : GPIO Number Connected to the LED    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
 > LEDs are controlled via GPIO    
+
 * Example Use    
 	* Leds(n) : Leds Object inheriting from Led Class    
 		* Params    
@@ -42,6 +46,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
 > Read the Input Device through GPIO    
+
 * Example Use    
 	* Input(n,activeHigh=Ture) : Input Object    
 		* Params    
@@ -63,6 +68,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
 > Read the switch status through GPIO    
+
 * Example Use    
 	* Switch(n) : Switch Object inheriting from Input Class    
 		* Params    
@@ -70,6 +76,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
 > Read the switch status through GPIO    
+
 * Example Use    
 	* Switches(n) : Switch Object inheriting from Input Class    
 		* Params    
@@ -79,6 +86,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
 > adc chip control through spi interface    
+
 * Example Use    
 	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
 		* Params    
@@ -124,6 +132,7 @@ from pop import *
     
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
 > Distance measurement using PSD sensor    
+
 * Example Use    
 	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
 		* Params    
@@ -140,6 +149,7 @@ from pop import *
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
 > Light measurement using CDS sensor    
+
 * Example Use    
 	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
 		* Params    
@@ -156,6 +166,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
 > Ambient sound measurement using Sound sensor    
+
 * Example Use    
 	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
 		* Params    
@@ -166,6 +177,7 @@ from pop import *
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
 > Voltage measurement with variable resistor    
+
 * Example Use    
 	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
 		* Params    
@@ -176,6 +188,7 @@ from pop import *
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
 > Voltage measurement with variable resistor    
+
 * Example Use    
 	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
 		* Params    
@@ -223,6 +236,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
 > Oled Controlled vi I2C Interface    
+
 * Example Use    
 	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
 		* Params    
@@ -400,6 +414,7 @@ from pop import *
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Gesture**    
 
 > Apds9960 Controlled via I2C Interface    
+
 * Example Use    
 	* Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
