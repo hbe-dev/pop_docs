@@ -124,36 +124,41 @@ from pop import *
 
 &emsp;`setChipSelect(cs)` : Set SPI Chip Select PIN    <br><br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface    
+&emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface
+<br><br>
 
-&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` : Set up callback function for automatic data read    <br><br>
+&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read    <br><br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
 &emsp;&emsp;&emsp;`type` : Data Read Type , Default TYPE_AVERAGE    
 &emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
 &emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
-&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)    
+&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
+<br><br>
 
-&emsp;`setSample(sample)` : Set Sampling Count    <br><br>
+&emsp;`setSample(sample)` : Set Sampling Count<br><br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`sample` : Sampling count   
- 
-&emsp;&emsp;&emsp;`getSample()` : Get Sampling Count    
+&emsp;&emsp;&emsp;`sample` : Sampling count
+<br><br>
 
-&emsp;&emsp;&emsp;`read()` : Read Data from Device (Raw Type)    
+&emsp;`getSample()` : Get Sampling Count    
 
-&emsp;&emsp;&emsp;`readAverage()` : Read Average Data from Device    
+&emsp;`read()` : Read Data from Device (Raw Type)    
 
-&emsp;&emsp;&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
+&emsp;`readAverage()` : Read Average Data from Device    
+
+&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
-&emsp;&emsp;&emsp;`max` : Maximum value of raw data    
+&emsp;&emsp;&emsp;`max` : Maximum value of raw data
+<br><br>
 
 &emsp;`readVoltAverage(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)    <br><br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
-&emsp;&emsp;&emsp;`max` : Maximum value of raw data  
+&emsp;&emsp;&emsp;`max` : Maximum value of raw data
+<br><br>
 
 &emsp;`run()` : Read data and call Callback function according to mode  
 
@@ -184,88 +189,117 @@ from pop import *
 > Light measurement using CDS sensor    
 
 <h5>&emsp;Initialization</h5>   
-	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+&emsp;`Cds(channel=-1, device=0, bus=0, speed=1000000)` : Cds object inheriting from SpiAdc Class<br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
-<h5>&emsp;Methods</h5>   
-	* setCalibrationPseudoLx(func) : Set calibration function    
-		**Params**   
-			func : Calibration function    
-	* readAverage() : Read lux data from device and calibration function    
+<h5>&emsp;Methods</h5>  
+
+&emsp;`setCalibrationPseudoLx(func)` : Set calibration function    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`func` : Calibration function
+<br><br>
+
+&emsp;`readAverage()` : Read lux data from device and calibration function    
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
 > Ambient sound measurement using Sound sensor    
 
 <h5>&emsp;Initialization</h5>   
-	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+&emsp;`Sound(channel=-1, device=0, bus=0, speed=1000000)` : Sound object inheriting from SpiAdc Class    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
+---
+
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
 > Voltage measurement with variable resistor    
 
 <h5>&emsp;Initialization</h5>   
-	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+&emsp;`Vr(channel=-1, device=0, bus=0, speed=1000000)` : Vr object inheriting from SpiAdc Class    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
+---
+
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
 > Voltage measurement with variable resistor    
 
-<h5>&emsp;Initialization</h5>   
-	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
-		**Params**   
-			channel : ADC Channel    
-			device : SPI Interface Channel , Default 0 (in Raspberry Pi)    
-			bus : Not Used..    
-			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
+<h5>&emsp;Initialization</h5>
+
+&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` : Potentiometer object inheriting from SpiAdc Class    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
 
 <h5>&emsp;Methods</h5>   
-	* setRangeTable(table) : Set potentiometer range table    
-		**Params**   
-			table : Table with 10 elements    
-			ex. [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]    
-	* getRangeTable() : return range table    
-	* readAverage() : return level from range table    
 
-<hr/>	
+&emsp;`setRangeTable(table)` : Set potentiometer range table    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`table` : Table with 10 elements    
+&emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
+<br><br>
+
+&emsp;`getRangeTable()` : return range table    
+
+&emsp;`readAverage()` : return level from range table    
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PiezoBuzzer**    
-* Class Description  : PiezoBuzzer controlled via Software PWM    
+> PiezoBuzzer controlled via Software PWM  
+
 <h5>&emsp;Initialization</h5>   
-	* PiezoBuzzer(n) : PiezoBuzzer object inheriting from PopThread    
-		**Params**   
-			n : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
+
+&emsp;`PiezoBuzzer(n)` : PiezoBuzzer object inheriting from PopThread    
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
 
 <h5>&emsp;Methods</h5>   
-	* setTempo(n) : Set tempo value    
-		**Params**   
-			n : Value to be set to tempo    
-	* getTempo() : Get tempo value    
-	* tone(scale,pitch,duration) : Play a note on piezo buzzer during duration value    
-		**Params**   
-			scale : Scale value to play on piezo buzzer (int type)    
-			pitch : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12    
-			duration : Tone is playing during duration value    
-	* rest(duration) : Stop to play piezo buzzer    
-		**Params**   
-			duration : The duration of the stopping    
-	* play(sheet) : play music by sheet    
-		**Params**   
-			sheet : list [[scale],[pitch],[duration]]    
-	* isPlay() : return play status    
 
-<hr/>
+&emsp;setTempo(n) : Set tempo value<br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;n : Value to be set to tempo
+<br><br>
+
+&emsp;getTempo() : Get tempo value    
+
+&emsp;tone(scale,pitch,duration) : Play a note on piezo buzzer during duration value    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`scale` : Scale value to play on piezo buzzer (int type)    
+&emsp;&emsp;&emsp;`pitch` : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12    
+&emsp;&emsp;&emsp;`duration` : Tone is playing during duration value
+<br><br>
+
+&emsp;rest(duration) : Stop to play piezo buzzer    <br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;duration : The duration of the stopping
+<br><br>
+
+&emsp;play(sheet) : play music by sheet<br><br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;sheet : list [[scale],[pitch],[duration]]
+<br><br>
+
+&emsp;isPlay() : return play status    
+
+---
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
 > Oled Controlled vi I2C Interface    
