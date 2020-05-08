@@ -15,7 +15,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp; `Out(n)` : Out Object  
+&emsp; `Out(n)` : Out Object  <br><br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;n : GPIO Number Connected to the Output Device
 
