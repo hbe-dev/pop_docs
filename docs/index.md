@@ -10,7 +10,7 @@ from pop import *
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
-* Class Description : Output device controlled throught GPIO    
+> Output device controlled throught GPIO    
 * Examples Use    
 	* Out(n) : Out Object    
 		* Params    
@@ -21,13 +21,13 @@ from pop import *
 	* off()    
 		: Set GPIO Connected to Output Device to LOW    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
-* Class Description : LEDs are controlled via GPIO    
+> LEDs are controlled via GPIO    
 * Example Use    
 	* Led(n) : Led Object inheriting from Out Class    
 		* Params    
 			n : GPIO Number Connected to the LED    
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
-* Class Description : LEDs are controlled via GPIO    
+> LEDs are controlled via GPIO    
 * Example Use    
 	* Leds(n) : Leds Object inheriting from Led Class    
 		* Params    
@@ -41,7 +41,7 @@ from pop import *
 <hr/> 
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
-* Class Description : Read the Input Device through GPIO    
+> Read the Input Device through GPIO    
 * Example Use    
 	* Input(n,activeHigh=Ture) : Input Object    
 		* Params    
@@ -62,14 +62,14 @@ from pop import *
 			type : Call condition of Callback function , Default BOTH    
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
-* Class Description : Read the switch status through GPIO    
+> Read the switch status through GPIO    
 * Example Use    
 	* Switch(n) : Switch Object inheriting from Input Class    
 		* Params    
 			n : GPIO Number Connected to the Switch    
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
-* Class Description : Read the switch status through GPIO    
+> Read the switch status through GPIO    
 * Example Use    
 	* Switches(n) : Switch Object inheriting from Input Class    
 		* Params    
@@ -78,7 +78,7 @@ from pop import *
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
-* Class Description : adc chip control through spi interface    
+> adc chip control through spi interface    
 * Example Use    
 	* SpiAdc(channel, device=0, bus=0, speed=1000000) : SpiAdc object    
 		* Params    
@@ -123,7 +123,7 @@ from pop import *
 	* run() : Read data and call Callback function according to mode    
     
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
-* Class Description : Distance measurement using PSD sensor    
+> Distance measurement using PSD sensor    
 * Example Use    
 	* Psd(channel=-1, device=0, bus=0, speed=1000000) : PSD object inheriting from SpiAdc Class    
 		* Params    
@@ -139,7 +139,7 @@ from pop import *
 			calibration : Calibration Value, Default 1.1    
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
-* Class Description : Light measurement using CDS sensor    
+> Light measurement using CDS sensor    
 * Example Use    
 	* Cds(channel=-1, device=0, bus=0, speed=1000000) : Cds object inheriting from SpiAdc Class    
 		* Params    
@@ -155,7 +155,7 @@ from pop import *
 	* readAverage() : Read lux data from device and calibration function    
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
-* Class Description : Ambient sound measurement using Sound sensor    
+> Ambient sound measurement using Sound sensor    
 * Example Use    
 	* Sound(channel=-1, device=0, bus=0, speed=1000000) : Sound object inheriting from SpiAdc Class    
 		* Params    
@@ -165,7 +165,7 @@ from pop import *
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
-* Class Description : Voltage measurement with variable resistor    
+> Voltage measurement with variable resistor    
 * Example Use    
 	* Vr(channel=-1, device=0, bus=0, speed=1000000) : Vr object inheriting from SpiAdc Class    
 		* Params    
@@ -175,7 +175,7 @@ from pop import *
 			speed : SPI Interface Clock Speed , Default 1000000(1MHz)    
 			
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
-* Class Description : Voltage measurement with variable resistor    
+> Voltage measurement with variable resistor    
 * Example Use    
 	* Potentiometer(channel=-1, device=0, bus=0, speed=1000000) : Potentiometer object inheriting from SpiAdc Class    
 		* Params    
@@ -222,7 +222,7 @@ from pop import *
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
-* Class Description : Oled Controlled vi I2C Interface    
+> Oled Controlled vi I2C Interface    
 * Example Use    
 	* Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True) : Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    
 		* Params    
@@ -399,7 +399,7 @@ from pop import *
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Gesture**    
 
-* Class Description : Apds9960 Controlled via I2C Interface    
+> Apds9960 Controlled via I2C Interface    
 * Example Use    
 	* Gesture(addr=APDS9960_ADDR) : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
@@ -429,12 +429,13 @@ from pop import *
 <hr/>
 
 ## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PixelDisplay**    
-* Class Description : Pixel Display controlled via Hardware PWM    
-	* PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    
-		* Params    
-			width : Number of Pixel width    
-			height : Number of Pixel height    
-			automode : automode setting. True/False    
+> Pixel Display controlled via Hardware PWM  
+  
+* PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False) : PixelDisplay object    
+	* Params    
+		width : Number of Pixel width    
+		height : Number of Pixel height    
+		automode : automode setting. True/False    
 
 * Methods    
 	* fill(color_arr) : Fill PixelDisplay to one color    
