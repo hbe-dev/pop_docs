@@ -31,3 +31,7 @@ h5 {
 .desc p {
     margin-botton:0px;
 }
+
+code {
+    font-size: 1em;
+}
