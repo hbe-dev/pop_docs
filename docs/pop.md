@@ -9,9 +9,9 @@ from pop import *
 <!-- # Class & Method Description-->
 <hr/>
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Out**    
+## <span class="title">Class</span> <span class="title_accent">**Out**</span>    
 
-> Output device controlled throught GPIO
+<blockquote class="desc"> Output device controlled throught GPIO</blockquote>
 
 <h5>&emsp;Initialization</h5>
 
@@ -26,8 +26,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Led**    
-> LEDs are controlled via GPIO    
+## <span class="title">Class</span> <span class="title_accent">**Led**</span>    
+<blockquote class="desc">LEDs are controlled via GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -37,8 +37,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Leds**    
-> LEDs are controlled via GPIO    
+## <span class="title">Class</span> <span class="title_accent">**Leds**</span>    
+<blockquote class="desc">LEDs are controlled via GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -53,8 +53,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Input**    
-> Read the Input Device through GPIO    
+## <span class="title">Class</span> <span class="title_accent">**Input**</span>    
+<blockquote class="desc">Read the Input Device through GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5> 
 
@@ -80,8 +80,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switch**    
-> Read the switch status through GPIO    
+## <span class="title">Class</span> <span class="title_accent">**Switch**</span>    
+<blockquote class="desc">Read the switch status through GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -91,8 +91,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Switches**    
-> Read the switch status through GPIO    
+## <span class="title">Class</span> <span class="title_accent">**Switches**</span>    
+<blockquote class="desc">Read the switch status through GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>
 
@@ -102,8 +102,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **SpiAdc**    
-> adc chip control through spi interface    
+## <span class="title">Class</span> <span class="title_accent">**SpiAdc**</span>    
+<blockquote class="desc">adc chip control through spi interface</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -159,8 +159,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Psd**    
-> Distance measurement using PSD sensor    
+## <span class="title">Class</span> <span class="title_accent">**Psd**</span>    
+<blockquote class="desc">Distance measurement using PSD sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -180,8 +180,8 @@ from pop import *
 			
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **CDS**  
-> Light measurement using CDS sensor    
+## <span class="title">Class</span> <span class="title_accent">**CDS**</span>  
+<blockquote class="desc">Light measurement using CDS sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -201,8 +201,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Sound**    
-> Ambient sound measurement using Sound sensor    
+## <span class="title">Class</span> <span class="title_accent">**Sound**</span>    
+<blockquote class="desc">Ambient sound measurement using Sound sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -215,8 +215,8 @@ from pop import *
 			
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Vr**    
-> Voltage measurement with variable resistor    
+## <span class="title">Class</span> <span class="title_accent">**Vr**</span>    
+<blockquote class="desc">Voltage measurement with variable resistor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -229,8 +229,8 @@ from pop import *
 			
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Potentiometer**    
-> Voltage measurement with variable resistor    
+## <span class="title">Class</span> <span class="title_accent">**Potentiometer**</span>    
+<blockquote class="desc">Voltage measurement with variable resistor</blockquote>    
 
 <h5>&emsp;Initialization</h5>
 
@@ -252,8 +252,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PiezoBuzzer**    
-> PiezoBuzzer controlled via Software PWM  
+## <span class="title">Class</span> <span class="title_accent">**PiezoBuzzer**</span>    
+<blockquote class="desc">PiezoBuzzer controlled via Software PWM</blockquote>  
 
 <h5>&emsp;Initialization</h5>   
 
@@ -285,8 +285,8 @@ from pop import *
 
 ---
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Oled**    
-> Oled Controlled vi I2C Interface    
+## <span class="title">Class</span> <span class="title_accent">**Oled**</span>    
+<blockquote class="desc">Oled Controlled vi I2C Interface</blockquote>    
 
 <h5>&emsp;Initialization</h5>  
 
@@ -492,9 +492,9 @@ from pop import *
 
 <hr/>
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **Gesture**    
+## <span class="title">Class</span> <span class="title_accent">**Gesture**</span>    
 
-> Apds9960 Controlled via I2C Interface    
+<blockquote class="desc">Apds9960 Controlled via I2C Interface</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -535,8 +535,8 @@ from pop import *
 	
 <hr/>
 
-## <span style="font-size:0.6em; font-weight:normal;">Class</span> **PixelDisplay**    
-> Pixel Display controlled via Hardware PWM  
+## <span class="title">Class</span> <span class="title_accent">**PixelDisplay**</span>    
+<blockquote class="desc">Pixel Display controlled via Hardware PWM</blockquote>  
   
 <h5>&emsp;Initialization</h5> 
 
