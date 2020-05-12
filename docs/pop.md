@@ -15,14 +15,14 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp; `Out(n)` : Out Object<br>
+&emsp;<code class="code_accent">Out(n)</code> : Out Object<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Output Device
 
 <h5>&emsp;Methods</h5>
 
-&emsp; `on()` : Set GPIO Connected to Output Device to HIGH  
-&emsp; `off()` : Set GPIO Connected to Output Device to LOW   
+&emsp;<code class="code_accent">on()</code> : Set GPIO Connected to Output Device to HIGH  
+&emsp;<code class="code_accent">off()</code> : Set GPIO Connected to Output Device to LOW   
 
 ---
 
@@ -31,7 +31,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Led(n)` : Led Object inheriting from Out Class<br>
+&emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from Out Class<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the LED   
 
@@ -42,14 +42,14 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Leds(n)` : Leds Object inheriting from Led Class<br>
+&emsp;<code class="code_accent">Leds(n)</code> : Leds Object inheriting from Led Class<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the LED  
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;`allOn()` : Set all GPIO Connected to Output Device to HIGH    
-&emsp;`allOff()` : Set all GPIO Connected to Output Device to LOW    
+&emsp;<code class="code_accent">allOn()</code> : Set all GPIO Connected to Output Device to HIGH    
+&emsp;<code class="code_accent">allOff()</code> : Set all GPIO Connected to Output Device to LOW    
 
 ---
 
@@ -58,21 +58,21 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;`Input(n,activeHigh=Ture)` : Input Object<br>
+&emsp;<code class="code_accent">Input(n,activeHigh=Ture)</code> : Input Object<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
 &emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default `True`    
 
 <h5>&emsp;Definitions</h5>
 
-&emsp;`FALLING` : Detect Falling Edge    
-&emsp;`RISING` : Detect Rising Edge    
-&emsp;`BOTH` : Detect Both Side    
+&emsp;<code class="code_accent">FALLING</code> : Detect Falling Edge    
+&emsp;<code class="code_accent">RISING</code> : Detect Rising Edge    
+&emsp;<code class="code_accent">BOTH</code> : Detect Both Side    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;`read()` : Read the Input Device Status    
-&emsp;`setCallback(func,param=None,type=BOTH)` : Set Callback Function When Detect Edge<br>
+&emsp;<code class="code_accent">read()</code> : Read the Input Device Status    
+&emsp;<code class="code_accent">setCallback(func,param=None,type=BOTH)</code> : Set Callback Function When Detect Edge<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
@@ -85,7 +85,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Switch(n)` : Switch Object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switch(n)</code> : Switch Object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Switch    
 
@@ -96,7 +96,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;`Switches(n)` : Switch Object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switches(n)</code> : Switch Object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the Switch    
 
@@ -107,7 +107,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`SpiAdc(channel, device=0, bus=0, speed=1000000)` : SpiAdc object <br>
+&emsp;<code class="code_accent">SpiAdc(channel, device=0, bus=0, speed=1000000)</code> : SpiAdc object <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -116,39 +116,39 @@ from pop import *
 			
 <h5>&emsp;Definitions</h5>  
 
-&emsp;`TYPE_AVERAGE` : Average data based on sampling count    
-&emsp;`TYPE_NORMAL` : Unaveraged raw data    
-&emsp;`MODE_FULL` : Call Callback function always    
-&emsp;`MODE_INCLUSIVE` : If data is in arange(max, min), call Callback function    
-&emsp;`MODE_EXCLUSIVE` : If data is over arange, call Callback function    
+&emsp;<code class="code_accent">TYPE_AVERAGE</code> : Average data based on sampling count    
+&emsp;<code class="code_accent">TYPE_NORMAL</code> : Unaveraged raw data    
+&emsp;<code class="code_accent">MODE_FULL</code> : Call Callback function always    
+&emsp;<code class="code_accent">MODE_INCLUSIVE</code> : If data is in arange(max, min), call Callback function    
+&emsp;<code class="code_accent">MODE_EXCLUSIVE</code> : If data is over arange, call Callback function    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;`getSample()` : Get Sampling Count    
-&emsp;`read()` : Read Data from Device (Raw Type)    
-&emsp;`readAverage()` : Read Average Data from Device    
-&emsp;`run()` : Read data and call Callback function according to mode  
-&emsp;`setChipSelect(cs)` : Set SPI Chip Select PIN<br>
+&emsp;<code class="code_accent">getSample()</code> : Get Sampling Count    
+&emsp;<code class="code_accent">read()</code> : Read Data from Device (Raw Type)    
+&emsp;<code class="code_accent">readAverage()</code> : Read Average Data from Device    
+&emsp;<code class="code_accent">run()</code> : Read data and call Callback function according to mode  
+&emsp;<code class="code_accent">setChipSelect(cs)</code> : Set SPI Chip Select PIN<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface
 
-&emsp;`setSample(sample)` : Set Sampling Count<br>
+&emsp;<code class="code_accent">setSample(sample)</code> : Set Sampling Count<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sample` : Sampling count
 
 
-&emsp;`readVolt(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)<br>
+&emsp;<code class="code_accent">readVolt(ref=3.3,max=3020.0)</code> : Read Data from Device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
 
 
-&emsp;`readVoltAverage(ref=3.3,max=3020.0)` : Read Data from Device (Voltage Type)<br>
+&emsp;<code class="code_accent">readVoltAverage(ref=3.3,max=3020.0)</code> : Read Data from Device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ref` : Reference Voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
 
-&emsp;`setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)` <br>&emsp;: Set up callback function for automatic data read<br>
+&emsp;<code class="code_accent">setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)</code> <br>&emsp;: Set up callback function for automatic data read<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
 &emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
@@ -164,7 +164,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Psd(channel=-1, device=0, bus=0, speed=1000000)` : PSD object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Psd(channel=-1, device=0, bus=0, speed=1000000)</code> : PSD object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -173,7 +173,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;`calcDist(val,calibration=1.1)` : Calculate distance value from raw data    <br>
+&emsp;<code class="code_accent">calcDist(val,calibration=1.1)</code> : Calculate distance value from raw data    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : ADC Raw Data    
 &emsp;&emsp;&emsp;`calibration` : Calibration Value, Default 1.1    
@@ -185,7 +185,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Cds(channel=-1, device=0, bus=0, speed=1000000)` : Cds object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Cds(channel=-1, device=0, bus=0, speed=1000000)</code> : Cds object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -194,8 +194,8 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>  
 
-&emsp;`readAverage()` : Read lux data from device and calibration function  
-&emsp;`setCalibrationPseudoLx(func)` : Set calibration function<br>
+&emsp;<code class="code_accent">readAverage()</code> : Read lux data from device and calibration function  
+&emsp;<code class="code_accent">setCalibrationPseudoLx(func)</code> : Set calibration function<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Calibration function
 
@@ -206,7 +206,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Sound(channel=-1, device=0, bus=0, speed=1000000)` : Sound object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Sound(channel=-1, device=0, bus=0, speed=1000000)</code> : Sound object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -220,7 +220,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Vr(channel=-1, device=0, bus=0, speed=1000000)` : Vr object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Vr(channel=-1, device=0, bus=0, speed=1000000)</code> : Vr object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -234,7 +234,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;`Potentiometer(channel=-1, device=0, bus=0, speed=1000000)` <br>&emsp;: Potentiometer object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Potentiometer(channel=-1, device=0, bus=0, speed=1000000)</code> <br>&emsp;: Potentiometer object inheriting from SpiAdc Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -243,9 +243,9 @@ from pop import *
 
 <h5>&emsp;Methods</h5>   
   
-&emsp;`readAverage()` : return level from range table   
-&emsp;`getRangeTable()` : return range table  
-&emsp;`setRangeTable(table)` : Set potentiometer range table<br>
+&emsp;<code class="code_accent">readAverage()</code> : return level from range table   
+&emsp;<code class="code_accent">getRangeTable()</code> : return range table  
+&emsp;<code class="code_accent">setRangeTable(table)</code> : Set potentiometer range table<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
 &emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
@@ -257,29 +257,29 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`PiezoBuzzer(n)` : PiezoBuzzer object inheriting from PopThread<br>
+&emsp;<code class="code_accent">PiezoBuzzer(n)</code> : PiezoBuzzer object inheriting from PopThread<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;`isPlay()` : return play status  
-&emsp;`getTempo()` : Get tempo value  
-&emsp;`setTempo(n)` : Set tempo value<br>
+&emsp;<code class="code_accent">isPlay()</code> : return play status  
+&emsp;<code class="code_accent">getTempo()</code> : Get tempo value  
+&emsp;<code class="code_accent">setTempo(n)</code> : Set tempo value<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : Value to be set to tempo
 
-&emsp;`tone(scale,pitch,duration)` : Play a note on piezo buzzer during duration value    <br>
+&emsp;<code class="code_accent">tone(scale,pitch,duration)</code> : Play a note on piezo buzzer during duration value    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`scale` : Scale value to play on piezo buzzer (int type)    
 &emsp;&emsp;&emsp;`pitch` : Pitch value to play on piezo buzzer. 'Do' is 1, 'Do♯' is 2, 'Re' is 3 and 'Si' is 12    
 &emsp;&emsp;&emsp;`duration` : Tone is playing during duration value
 
-&emsp;`rest(duration)` : Stop to play piezo buzzer    <br>
+&emsp;<code class="code_accent">rest(duration)</code> : Stop to play piezo buzzer    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`duration` : The duration of the stopping
 
-&emsp;`play(sheet)` : play music by sheet<br>
+&emsp;<code class="code_accent">play(sheet)</code> : play music by sheet<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
 
@@ -290,47 +290,47 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>  
 
-&emsp;`Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True)` <br>&emsp;: Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    <br>
+&emsp;<code class="code_accent">Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True)</code> <br>&emsp;: Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : OLED I2C ADDR.default 0x3c    
 &emsp;&emsp;&emsp;`type` : OLED Type. difined board config    
 &emsp;&emsp;&emsp;`automode` : select automode. default `True`    
 
 &emsp;**Definitions**    
-&emsp;`OLED_SSD1306_I2C_128x32` : OLED device type number, if model name is 'SSD1306', select this type    
-&emsp;`OLED_SH1106_I2C_128x64` : OLED device type number, if model name is 'SSH1106', select this type    
-&emsp;`BLACK` : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
-&emsp;`WHITE` : Another of them is white. Numeric value is 1    
+&emsp;<code class="code_accent">OLED_SSD1306_I2C_128x32</code> : OLED device type number, if model name is 'SSD1306', select this type    
+&emsp;<code class="code_accent">OLED_SH1106_I2C_128x64</code> : OLED device type number, if model name is 'SSH1106', select this type    
+&emsp;<code class="code_accent">BLACK</code> : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
+&emsp;<code class="code_accent">WHITE</code> : Another of them is white. Numeric value is 1    
 
 <h5>&emsp;Methods</h5>
 
-&emsp;`width()` : Retun widht of OLED    
-&emsp;`height()` : Return height of OLED   
-&emsp;`display()` : Display buffer data on OLED    
-&emsp;`clearDisplay()` : Clear the data on OLED    
-&emsp;`init(type=OLED_SH1106_I2C_128x64)` <br>&emsp;: Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
+&emsp;<code class="code_accent">width()</code> : Retun widht of OLED    
+&emsp;<code class="code_accent">height()</code> : Return height of OLED   
+&emsp;<code class="code_accent">display()</code> : Display buffer data on OLED    
+&emsp;<code class="code_accent">clearDisplay()</code> : Clear the data on OLED    
+&emsp;<code class="code_accent">init(type=OLED_SH1106_I2C_128x64)</code> <br>&emsp;: Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`type` : Select OLED type
 
-&emsp;`print(string)` : Print a string on OLED. Replace '\n' to New-Line    
+&emsp;<code class="code_accent">print(string)</code> : Print a string on OLED. Replace '\n' to New-Line    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`string`: The string to print on OLED
 
-&emsp;`drawCircle(x0, y0, r, color)` : Draw a circle on OLED    
+&emsp;<code class="code_accent">drawCircle(x0, y0, r, color)</code> : Draw a circle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x0` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y0` : Start point of y-axis    
 &emsp;&emsp;&emsp;`r` : Radious of the circle    
 &emsp;&emsp;&emsp;`color` : The color of a circle. BLACK(0) or WHITE(1)    
 
-&emsp;`fillCircle(x0, y0, r, color)` : Draw a filled circle on OLED    
+&emsp;<code class="code_accent">fillCircle(x0, y0, r, color)</code> : Draw a filled circle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x0` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y0` : Start point of y-axis    
 &emsp;&emsp;&emsp;`r` : Radious of the circle    
 &emsp;&emsp;&emsp;`color` : The color of a circle. BLACK(0) or WHITE(1)   
 
-&emsp;`drawLine(x0, y0, x1, y1, color)` : Draw a line on OLED    
+&emsp;<code class="code_accent">drawLine(x0, y0, x1, y1, color)</code> : Draw a line on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x0` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y0` : Start point of y-axis    
@@ -338,7 +338,7 @@ from pop import *
 &emsp;&emsp;&emsp;`y1` : End point of y-axis    
 &emsp;&emsp;&emsp;`color` : The color of a line. BLACK(0) or WHITE(1)    
 
-&emsp;`drawRect(x, y, w, h, color)` : Draw a rectangle on OLED    
+&emsp;<code class="code_accent">drawRect(x, y, w, h, color)</code> : Draw a rectangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -346,7 +346,7 @@ from pop import *
 &emsp;&emsp;&emsp;`h` : Height of the rectangle    
 &emsp;&emsp;&emsp;`color` : The color of a rectangle. BLACK(0) or WHITE(1)   
 
-&emsp;`fillRect(x, y, w, h, color)` : Draw a filled rectangle on OLED    
+&emsp;<code class="code_accent">fillRect(x, y, w, h, color)</code> : Draw a filled rectangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -354,7 +354,7 @@ from pop import *
 &emsp;&emsp;&emsp;`h` : Height of the rectangle    
 &emsp;&emsp;&emsp;`color` : The color of a rectangle. BLACK(0) or WHITE(1)    
 
-&emsp;`drawVerticalBargraph(x, y, w, h, color, percent)` : Draw a graph on OLED    
+&emsp;<code class="code_accent">drawVerticalBargraph(x, y, w, h, color, percent)</code> : Draw a graph on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -363,7 +363,7 @@ from pop import *
 &emsp;&emsp;&emsp;`color` : The color of the graph. BLACK(0) or WHITE(1)    
 &emsp;&emsp;&emsp;`percent` : The percentage of a graph. The direction of graph is always up-side    
 
-&emsp;`drawHorizontalBargraph(x, y, w, h, color, percent)` : Draw a graph on OLED    
+&emsp;<code class="code_accent">drawHorizontalBargraph(x, y, w, h, color, percent)</code> : Draw a graph on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -372,7 +372,7 @@ from pop import *
 &emsp;&emsp;&emsp;`color` : The color of the graph. BLACK(0) or WHITE(1)    
 &emsp;&emsp;&emsp;`percent` : The percentage of a graph. The direction of graph is always right-side    
 
-&emsp;`drawRoundRect(x, y, w, h, r, color)` : Draw a rounded rectangle on OLED    
+&emsp;<code class="code_accent">drawRoundRect(x, y, w, h, r, color)</code> : Draw a rounded rectangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -381,7 +381,7 @@ from pop import *
 &emsp;&emsp;&emsp;`r` : Curvature of edge of the rounded rectangle    
 &emsp;&emsp;&emsp;`color` : The color of a graph. BLACK(0) or WHITE(1)   
 
-&emsp;`fillRoundRect(x, y, w, h, r, color)` : Draw a rounded and filled rectangle on OLED    
+&emsp;<code class="code_accent">fillRoundRect(x, y, w, h, r, color)</code> : Draw a rounded and filled rectangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -390,7 +390,7 @@ from pop import *
 &emsp;&emsp;&emsp;`r` : Curvature of edge of the rounded rectangle    
 &emsp;&emsp;&emsp;`color` : The color of a graph BLACK(0) or WHITE(1)   
 
-&emsp;`drawTriangle(x0, y0, x1, y1, x2, y2, color)` : Draw a triangle on OLED    
+&emsp;<code class="code_accent">drawTriangle(x0, y0, x1, y1, x2, y2, color)</code> : Draw a triangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x0` : First point of x-axis    
 &emsp;&emsp;&emsp;`y0` : First point of y-axis    
@@ -400,7 +400,7 @@ from pop import *
 &emsp;&emsp;&emsp;`y2` : Third point of y-axis    
 &emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)    
 
-&emsp;`fillTriangle(x0, y0, x1, y1, x2, y2, color)` : Draw a filled triangle on OLED    
+&emsp;<code class="code_accent">fillTriangle(x0, y0, x1, y1, x2, y2, color)</code> : Draw a filled triangle on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x0` : First point of x-axis    
 &emsp;&emsp;&emsp;`y0` : First point of y-axis    
@@ -410,7 +410,7 @@ from pop import *
 &emsp;&emsp;&emsp;`y2` : Third point of y-axis    
 &emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)
    
-&emsp;`drawChar(x, y, c, color, bg, size)` : Draw a character on OLED    
+&emsp;<code class="code_accent">drawChar(x, y, c, color, bg, size)</code> : Draw a character on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of x-axis    
@@ -419,7 +419,7 @@ from pop import *
 &emsp;&emsp;&emsp;`bg` : The background of a character. Background size is 6 * 8 * textsize    
 &emsp;&emsp;&emsp;`size` : Pixel size of charactor strock. Default is 1   
 
-&emsp;`drawBitmap(x, y, bitmap, w, h, color)` : Draw a bitmap data on OLED    
+&emsp;<code class="code_accent">drawBitmap(x, y, bitmap, w, h, color)</code> : Draw a bitmap data on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : Start point of x-axis    
 &emsp;&emsp;&emsp;`y` : Start point of y-axis    
@@ -428,65 +428,65 @@ from pop import *
 &emsp;&emsp;&emsp;`h` : Height of bitmap data    
 &emsp;&emsp;&emsp;`color` : The color of a character. BLACK(0) or WHITE(1)   
 
-&emsp;`setCursor(x, y)` : Set the cursor on OLED, This value is used in write()    
+&emsp;<code class="code_accent">setCursor(x, y)</code> : Set the cursor on OLED, This value is used in write()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis point of cursor    
 &emsp;&emsp;&emsp;`y` : y-axis point of cursor 
 
-&emsp;`setTextSize(s)` : Set text size, This value is used in write()    
+&emsp;<code class="code_accent">setTextSize(s)</code> : Set text size, This value is used in write()    
 &emsp;&emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`s` : Pixel size of charactor strock. Default is 1 
 
-&emsp;`setTextColor(c)` : Set text color, This value is used in write()    
+&emsp;<code class="code_accent">setTextColor(c)</code> : Set text color, This value is used in write()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`c` : Text color value. BLACK(0) or WHITE(1)   
 
-&emsp;`setTextColorWithBg(c, b)` : Set text color and background color, This value is used in write()    
+&emsp;<code class="code_accent">setTextColorWithBg(c, b)</code> : Set text color and background color, This value is used in write()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`c` : Text color value. BLACK(0) or WHITE(1)    
 &emsp;&emsp;&emsp;`b` : Background color value. BLACK(0) or WHITE(1) 
 
-&emsp;`drawPixel(x, y, color)` : Draw a dot on OLED    
+&emsp;<code class="code_accent">drawPixel(x, y, color)</code> : Draw a dot on OLED    
 &emsp;&emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : The point of a dot    
 &emsp;&emsp;&emsp;`y` : The point of a dot    
 &emsp;&emsp;&emsp;`color` : The color of a dot    
 
-&emsp;`setBrightness(Brightness)` : Set brightness of OLED    
+&emsp;<code class="code_accent">setBrightness(Brightness)</code> : Set brightness of OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`Brightness` : Brightness value to be set   
 
-&emsp;`invertDisplay(i)` : Change display mode    
+&emsp;<code class="code_accent">invertDisplay(i)</code> : Change display mode    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`i` : If i is `True`, dispaly mode is Inverse mode but if i is False, display mode is Normal mode. In Inverse mode, 0 is white and 1 is black    
 
-&emsp;`istartscrollright(start, stop)` <br>&emsp;: Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;<code class="code_accent">istartscrollright(start, stop)</code> <br>&emsp;: Scroll the screen in the row-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`start` : Start point of scrolling    
 &emsp;&emsp;&emsp;`stop` : Stop point of scrolling   
 
-&emsp;`startscrollleft(start, stop)` <br>&emsp;: Scroll the screen in the row-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;<code class="code_accent">startscrollleft(start, stop)</code> <br>&emsp;: Scroll the screen in the row-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`start` : Start point of scrolling    
 &emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
 
-&emsp;`startscrolldiagright(start, stop)` <br>&emsp;: Scroll the screen in the column-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;<code class="code_accent">startscrolldiagright(start, stop)</code> <br>&emsp;: Scroll the screen in the column-right direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`start` : Start point of scrolling    
 &emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
 
-&emsp;`startscrolldiagleft(start, stop)` <br>&emsp;: Scroll the screen in the column-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
+&emsp;<code class="code_accent">startscrolldiagleft(start, stop)</code> <br>&emsp;: Scroll the screen in the column-left direction, Scroll method isn't working in OLED_SH1106_I2C_128x64    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`start` : Start point of scrolling    
 &emsp;&emsp;&emsp;`stop` : Stop point of scrolling  
 
-&emsp;`stopscroll()` : Stop scrolling the screen    
+&emsp;<code class="code_accent">stopscroll()</code> : Stop scrolling the screen    
 
-&emsp;`write(c)` : Write the character at location of cursor on OLED    
+&emsp;<code class="code_accent">write(c)</code> : Write the character at location of cursor on OLED    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`c` : The character to be written   
 
-&emsp;`setAutomode(automode)` : set automode    
+&emsp;<code class="code_accent">setAutomode(automode)</code> : set automode    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
 
@@ -498,16 +498,16 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;`Gesture(addr=APDS9960_ADDR)` : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
+&emsp;<code class="code_accent">Gesture(addr=APDS9960_ADDR)</code> : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
 	
 <h5>&emsp;Methods</h5>   
 
-&emsp;`isAvailable()` : return Gesture detection status(1). Wait until Gesture is detected    
-&emsp;`read()` : return number as Gesture status.  
+&emsp;<code class="code_accent">isAvailable()</code> : return Gesture detection status(1). Wait until Gesture is detected    
+&emsp;<code class="code_accent">read()</code> : return number as Gesture status.  
 &emsp;&emsp;**Return**    
 &emsp;&emsp;&emsp;`0` : "None" , `1` : "Left", `2` : "Right", `3` : "Up", `4` : "Down", `5`: "Near", `6` : "Far"    
 
-&emsp;`readStr()` : return String as Gesture status.    
+&emsp;<code class="code_accent">readStr()</code> : return String as Gesture status.    
 &emsp;&emsp;**Return**  
 &emsp;&emsp;&emsp;"None" , "Left", "Right", "Up", "Down", "Near", "Far"    
 		
@@ -540,7 +540,7 @@ from pop import *
   
 <h5>&emsp;Initialization</h5> 
 
-&emsp;`PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False)` <br>&emsp;: PixelDisplay object    
+&emsp;<code class="code_accent">PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False)</code> <br>&emsp;: PixelDisplay object    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`width` : Number of Pixel width    
 &emsp;&emsp;&emsp;`height` : Number of Pixel height    
@@ -548,35 +548,35 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;`display()` : send command from buffer. when Automode `False` use    
-&emsp;`getRGBType()` : getRGBType    
-&emsp;`RGBtoHEX(color_arr)` : convert RGB list data to HEX  
-&emsp;`clear()` : clear PixelDisplay  
-&emsp;`rainbow()` : display rainbow color on Pixel Display  
-&emsp;`fill(color_arr)` : Fill PixelDisplay to one color    
+&emsp;<code class="code_accent">display()</code> : send command from buffer. when Automode `False` use    
+&emsp;<code class="code_accent">getRGBType()</code>: getRGBType    
+&emsp;<code class="code_accent">RGBtoHEX(color_arr)</code> : convert RGB list data to HEX  
+&emsp;<code class="code_accent">clear()</code> : clear PixelDisplay  
+&emsp;<code class="code_accent">rainbow()</code> : display rainbow color on Pixel Display  
+&emsp;<code class="code_accent">fill(color_arr)</code> : Fill PixelDisplay to one color    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`color_arr` : A color to be filled. Type is list of [R, G, B]  
    
-&emsp;`setColor(x, y, color_arr)` : set PixelDisplay color_arr on x,y    
+&emsp;<code class="code_accent">setColor(x, y, color_arr)</code> : set PixelDisplay color_arr on x,y    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis    
 &emsp;&emsp;&emsp;`y` : y-axis    
 &emsp;&emsp;&emsp;`color_arr` : A color to be set. Type is list of [R, G, B] or HEX (0xRRGGBB)    
 
-&emsp;`getColor(x, y)` : return color on x,y as INT type    
+&emsp;<code class="code_accent">getColor(x, y)</code> : return color on x,y as INT type    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis    
 &emsp;&emsp;&emsp;`y` : y-axis 
 
-&emsp;`setAutomode(automode)` : set automode. default `True`. if `False` set, shuld use display()    
+&emsp;<code class="code_accent">setAutomode(automode)</code> : set automode. default `True`. if `False` set, shuld use display()    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
    
-&emsp;`setBrightness(brightness)` : set Brightness    
+&emsp;<code class="code_accent">setBrightness(brightness)</code> : set Brightness    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`brightness` : brightness (0~255)    
   
-&emsp;`setColorInvert(invert)` : inver color. default `False`    
+&emsp;<code class="code_accent">setColorInvert(invert)</code> : inver color. default `False`    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`invert`  
 &emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
