@@ -31,7 +31,7 @@ h5 {
 }
 
 code {
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 hr {
@@ -40,4 +40,5 @@ hr {
 
 .code_accent{
     border-left:3px solid;
+    font-size:0.9em;
 }
