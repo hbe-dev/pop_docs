@@ -37,3 +37,7 @@ code {
 hr {
     border-top: 1px solid #000000;
 }
+
+code_accent{
+    border-left:3px solid;
+}
