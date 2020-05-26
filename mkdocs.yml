@@ -5,7 +5,7 @@ markdown_extensions:
         baselevel: 2
 
 theme:
-    name: readthedocs
+    name: mkdocs
     custom_dir: theme/
         
 extra_css: 
