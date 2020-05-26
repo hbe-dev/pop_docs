@@ -1,5 +1,5 @@
 site_name: Pop Description
-theme: readthedocs
+theme: flatly
 highlightjs: true
 markdown_extensions:
     - toc:
