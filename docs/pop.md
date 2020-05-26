@@ -53,6 +53,17 @@ from pop import *
 
 ---
 
+## <span class="title">Class</span> <span class="title_accent">**Fan**</span>    
+<blockquote class="desc">Fan is controlled via GPIO</blockquote>    
+
+<h5>&emsp;Initialization</h5>   
+
+&emsp;<code class="code_accent">Fan(n)</code> : Fan Object inheriting from Out Class<br>
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Fan   
+
+---
+
 ## <span class="title">Class</span> <span class="title_accent">**Input**</span>    
 <blockquote class="desc">Read the Input Device through GPIO</blockquote>    
 
@@ -99,6 +110,17 @@ from pop import *
 &emsp;<code class="code_accent">Switches(n)</code> : Switch Object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the Switch    
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Pir**</span>    
+<blockquote class="desc">Pir</blockquote>
+
+<h5>&emsp;Initialization</h5>
+
+&emsp;<code class="code_accent">Pir(n)</code> : Pir Object inheriting from Input Class<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Pir 
 
 ---
 
@@ -201,6 +223,82 @@ from pop import *
 
 ---
 
+## <span class="title">Class</span> <span class="title_accent">**\*Gas**</span>    
+<blockquote class="desc">Gas</blockquote>    
+
+<h5>&emsp;Initialization</h5>   
+
+&emsp;<code class="code_accent">Gas(channel=-1, device=0, bus=0, speed=1000000)</code> : Gas object inheriting from SpiAdc Class<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)       
+			
+<h5>&emsp;Methods</h5>
+
+&emsp;<code class="code_accent">calibration(rl=4.7, clean=1)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`rl` : ...
+&emsp;&emsp;&emsp;`clean` : ...
+
+&emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`x` : ...
+&emsp;&emsp;&emsp;`y` : ...
+&emsp;&emsp;&emsp;`inclination` : ...
+
+&emsp;<code class="code_accent">setMethanCurve(x, y, inclination)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`x` : ...
+&emsp;&emsp;&emsp;`y` : ...
+&emsp;&emsp;&emsp;`inclination` : ...
+
+&emsp;<code class="code_accent">setEthanolCurve(x, y, inclination)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`x` : ...
+&emsp;&emsp;&emsp;`y` : ...
+&emsp;&emsp;&emsp;`inclination` : ...
+
+&emsp;<code class="code_accent">calcPropan(val)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`val` : ...
+
+&emsp;<code class="code_accent">calcMethan(val)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`val` : ...
+
+&emsp;<code class="code_accent">calcEthanol(val)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`val` : ...
+
+&emsp;<code class="code_accent">resistanceCalculation(val, rl=4.7)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`val` : ...
+&emsp;&emsp;&emsp;`rl` : ...
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Temperature**</span>    
+<blockquote class="desc">Temperature object inheriting from SpiAdc Class</blockquote>    
+
+<h5>&emsp;Initialization</h5>   
+
+&emsp;<code class="code_accent">Temperature(channel, device=0, bus=0, speed=1000000)</code> : Temperature object inheriting from SpiAdc Class<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`channel` : ADC Channel    
+&emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
+&emsp;&emsp;&emsp;`bus` : Not Used..    
+&emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)   
+			
+<h5>&emsp;Methods</h5>
+
+&emsp;<code class="code_accent">calcTempC(val, cal=1309)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`val` : ...
+&emsp;&emsp;&emsp;`cal` : ...
+
+---
+
 ## <span class="title">Class</span> <span class="title_accent">**Sound**</span>    
 <blockquote class="desc">Ambient sound measurement using Sound sensor</blockquote>    
 
@@ -282,6 +380,61 @@ from pop import *
 &emsp;<code class="code_accent">play(sheet)</code> : play music by sheet<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**I2c**</span>    
+<blockquote class="desc">I2c</blockquote>
+
+<h5>&emsp;Initialization</h5>   
+
+&emsp;<code class="code_accent">I2c(addr, bus=1)</code> : I2c object <br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : I2c Address    
+&emsp;&emsp;&emsp;`bus` : I2c Interface bus. Default is 1
+			
+<h5>&emsp;Methods</h5>   
+
+&emsp;<code class="code_accent">read()</code> : ...
+&emsp;<code class="code_accent">readByte(reg)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;<code class="code_accent">readWord(reg)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;<code class="code_accent">readBlock(reg, length)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;&emsp;&emsp;`length` : ...    
+&emsp;<code class="code_accent">write(data)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`data` : ...    
+&emsp;<code class="code_accent">writeByte(reg, data)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;&emsp;&emsp;`data` : ...    
+&emsp;<code class="code_accent">writeWord(reg, data)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;&emsp;&emsp;`data` : ...    
+&emsp;<code class="code_accent">writeBlock(reg, data)</code> :....
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`reg` : ...
+&emsp;&emsp;&emsp;`data` : ...    
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**TempHumi**</span>    
+<blockquote class="desc">Temperature & Humidity</blockquote>
+
+<h5>&emsp;Initialization</h5>
+
+&emsp;<code class="code_accent">TempHumi()</code> : ... <br>
+			
+<h5>&emsp;Methods</h5>   
+
+&emsp;<code class="code_accent">readTemp()</code> : ...
+&emsp;<code class="code_accent">readHumi()</code> : ...
 
 ---
 
@@ -582,3 +735,329 @@ from pop import *
 &emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
 &emsp;&emsp;&emsp;&emsp;`False` : input (255,0,0) -> (255,0,0)    
 
+---
+
+## <span class="title">Class</span> <span class="title_accent">**TextLcd**</span>    
+<blockquote class="desc">TextLcd</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">TextLcd()</code> <br>&emsp;: TextLcd object 
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">command(command)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`command` : ...
+
+&emsp;<code class="code_accent">clear()</code> : ...
+
+&emsp;<code class="code_accent">returnHome()</code> : ...
+
+&emsp;<code class="code_accent">displayOn()</code> : ...
+
+&emsp;<code class="code_accent">displayOff()</code> : ...
+
+&emsp;<code class="code_accent">displayShiftR()</code> : ...
+
+&emsp;<code class="code_accent">displayShiftL()</code> : ...
+
+&emsp;<code class="code_accent">cursorOn(blinking)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`blinking` : ...
+
+&emsp;<code class="code_accent">cursorOff()</code> : ...
+
+&emsp;<code class="code_accent">cursorShiftR()</code> : ...
+
+&emsp;<code class="code_accent">cursorShiftL()</code> : ...
+
+&emsp;<code class="code_accent">entryModeSet()</code> : ...
+
+&emsp;<code class="code_accent">setCursor(x, y)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`x` : ...
+&emsp;&emsp;&emsp;`y` : ...
+
+&emsp;<code class="code_accent">data(data)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`data` : ...
+
+&emsp;<code class="code_accent">print(string)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`string` : ...
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Mpu6050**</span>    
+<blockquote class="desc">Mpu6050</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">Mpu6050(addr)</code> <br>&emsp;: Mpu6050 object
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">readAccel()</code> : ...
+
+&emsp;<code class="code_accent">readGyro()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Touch**</span>    
+<blockquote class="desc">Touch</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">Touch()</code> <br>&emsp;: Touch object 
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">read()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Dust**</span>    
+<blockquote class="desc">Dust</blockquote> 
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">Dust()</code> <br>&emsp;: Dust object 
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">read()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**PwmController**</span>    
+<blockquote class="desc">PwmController</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">PwmController()</code> <br>&emsp;: PwmController object 
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">setChannel(channel)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`channel` : ... 
+
+&emsp;<code class="code_accent">setDuty(percent)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`percent` : ...
+
+&emsp;<code class="code_accent">setFreq(freq)</code> : ...
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`freq` : ...
+
+&emsp;<code class="code_accent">setInvertPulse()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**RGBLed**</span>    
+<blockquote class="desc">RGBLed</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">RGBLed(*ns)</code> <br>&emsp;: RGBLed object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`*ns` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">on(color)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`color` : ...
+
+&emsp;<code class="code_accent">off(color)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`color` : ...
+
+&emsp;<code class="code_accent">set(*colors)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`*colors` : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**ShiftRegister**</span>    
+<blockquote class="desc">ShiftRegister</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">ShiftRegister(*ns)</code> <br>&emsp;: ShiftRegister object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`*ns` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">shiftout(val)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`val` : ...
+
+&emsp;<code class="code_accent">fnd(val)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`val` : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**StepMotor**</span>    
+<blockquote class="desc">StepMotor</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">StepMotor(*ns)</code> <br>&emsp;: StepMotor object
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`*ns` : ...
+
+&emsp;**Definitions**    
+&emsp;<code class="code_accent">SPEED_1</code> : ...
+&emsp;<code class="code_accent">SPEED_2</code> : ...
+&emsp;<code class="code_accent">SPEED_3</code> : ...
+&emsp;<code class="code_accent">ONE_PHASE_FULLSTEP</code> : ...
+&emsp;<code class="code_accent">TWO_PHASE_FULLSTEP</code> : ...
+&emsp;<code class="code_accent">HALFSTEP</code> : ...
+&emsp;<code class="code_accent">SPEED_SEQ</code> : ...
+&emsp;<code class="code_accent">ONE_PHASE_FULLSTEP_SEQ</code> : ...
+&emsp;<code class="code_accent">TWO_PHASE_FULLSTEP_SEQ</code> : ...
+&emsp;<code class="code_accent">HALFSTEP_SEQ</code> : ...
+
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">forward()</code> : ...
+
+&emsp;<code class="code_accent">backward()</code> : ...
+
+&emsp;<code class="code_accent">stop()</code> : ...
+
+&emsp;<code class="code_accent">setMode(mode)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`mode` : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Audio**</span>    
+<blockquote class="desc">Audio</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">Audio(blocking=True, cont=False)</code> <br>&emsp;: Audio object
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`blocking` : ...
+&emsp;&emsp;&emsp;`cont` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">stop()</code> : ...
+
+&emsp;<code class="code_accent">close()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**AudioPlay**</span>    
+<blockquote class="desc">AudioPlay</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">AudioPlay()</code> <br>&emsp;: AudioPlay object 
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`blocking` : ...
+&emsp;&emsp;&emsp;`cont` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">run()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**AudioPlayList**</span>    
+<blockquote class="desc">AudioPlayList</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">AudioPlayList(blocking=True, cont=False)</code> <br>&emsp;: AudioPlayList object 
+&emsp;&emsp;**Params**
+&emsp;&emsp;&emsp;`blocking` : ...
+&emsp;&emsp;&emsp;`cont` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">run()</code> : ...
+
+&emsp;<code class="code_accent">isPlay()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**AudioRecord**</span>    
+<blockquote class="desc">AudioRecord</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">AudioRecord(file, sFormat=8, sChannel=1, sRate=48000, sFramePerBuffer=1024)</code> <br>&emsp;: AudioRecord object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`file` : ...
+&emsp;&emsp;&emsp;`sFormat` : ...
+&emsp;&emsp;&emsp;`sChannel` : ...
+&emsp;&emsp;&emsp;`sRate` : ...
+&emsp;&emsp;&emsp;`sFramePerBuffer` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">run()</code> : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Tone**</span>    
+<blockquote class="desc">Tone</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">Tone(tempo=100, volume=.5, rate=48000, channels=1)</code> <br>&emsp;: Tone object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`tempo` : ...
+&emsp;&emsp;&emsp;`volume` : ...
+&emsp;&emsp;&emsp;`rate` : ...
+&emsp;&emsp;&emsp;`channels` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">close()</code> : ...
+
+&emsp;<code class="code_accent">setTempo(tempo)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`tempo` : ...
+
+&emsp;<code class="code_accent">rest(duration)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`duration` : ...
+
+&emsp;<code class="code_accent">play(octave, pitch, duration)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`octave` : ...
+&emsp;&emsp;&emsp;`pitch` : ...
+&emsp;&emsp;&emsp;`duration` : ...
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**SoundMeter**</span>    
+<blockquote class="desc">SoundMeter</blockquote>
+
+<h5>&emsp;Initialization</h5> 
+
+&emsp;<code class="code_accent">SoundMeter(sampleFormat=pyaudio.paInt16, channelNums=1, framesPerBuffer=1024, sampleRate=48000)</code> <br>&emsp;: SoundMeter object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`sampleFormat` : ...
+&emsp;&emsp;&emsp;`channelNums` : ...
+&emsp;&emsp;&emsp;`framesPerBuffer` : ...
+&emsp;&emsp;&emsp;`sampleRate` : ...
+
+<h5>&emsp;Methods</h5>  
+
+&emsp;<code class="code_accent">setCallback(func, *args)</code> : ...
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`func` : ...
+&emsp;&emsp;&emsp;`*args` : ...
+
+&emsp;<code class="code_accent">stop()</code> : ...
