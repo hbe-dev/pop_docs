@@ -276,6 +276,7 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : ...    
 &emsp;&emsp;&emsp;`rl` : ...    
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Temperature**</span>    
@@ -782,6 +783,7 @@ from pop import *
 &emsp;<code class="code_accent">print(string)</code> : ...<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`string` : ...    
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Mpu6050**</span>    
