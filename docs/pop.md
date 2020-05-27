@@ -752,36 +752,36 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">clear()</code> : ...  
-&emsp;<code class="code_accent">returnHome()</code> : ...  
-&emsp;<code class="code_accent">displayOn()</code> : ...  
-&emsp;<code class="code_accent">displayOff()</code> : ...  
-&emsp;<code class="code_accent">displayShiftR()</code> : ...  
-&emsp;<code class="code_accent">displayShiftL()</code> : ...  
-&emsp;<code class="code_accent">cursorOff()</code> : ...  
-&emsp;<code class="code_accent">cursorShiftR()</code> : ...  
-&emsp;<code class="code_accent">cursorShiftL()</code> : ...  
+&emsp;<code class="code_accent">clear()</code> : Clear Textlcd. It make Textlcd became empty.  
+&emsp;<code class="code_accent">returnHome()</code> : Move cursor to (0, 0).  
+&emsp;<code class="code_accent">displayOn()</code> : Turn on the display. The display is turned on at first.  
+&emsp;<code class="code_accent">displayOff()</code> : Turn off the display. Turned off display is not working.  
+&emsp;<code class="code_accent">displayShiftR()</code> : Shift the display to right.  
+&emsp;<code class="code_accent">displayShiftL()</code> : Shift the display to left.  
+&emsp;<code class="code_accent">cursorShiftR()</code> : Shift cursor to right.  
+&emsp;<code class="code_accent">cursorShiftL()</code> : Shift cursor to left.  
 &emsp;<code class="code_accent">entryModeSet()</code> : ...  
-&emsp;<code class="code_accent">command(command)</code> : ...<br>
+&emsp;<code class="code_accent">cursorOff()</code> : Turn off cursor.  
+&emsp;<code class="code_accent">cursorOn(blinking)</code> : Turn on cursor.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`command` : ...    
+&emsp;&emsp;&emsp;`blinking` : If True, cursor is blinking. Else False, cursor is always on.    
 
-&emsp;<code class="code_accent">cursorOn(blinking)</code> : ...<br>
+&emsp;<code class="code_accent">command(command)</code> : Send the command to TextLcd<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blinking` : ...    
+&emsp;&emsp;&emsp;`command` : Command that to be sent to Textlcd.    
 
-&emsp;<code class="code_accent">setCursor(x, y)</code> : ...<br>
+&emsp;<code class="code_accent">setCursor(x, y)</code> : Move cursor to (x, y). Unit is 1 block.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x` : ...    
-&emsp;&emsp;&emsp;`y` : ...    
+&emsp;&emsp;&emsp;`x` : x axis of cursor. (0 ~ Width)    
+&emsp;&emsp;&emsp;`y` : y axis of cursor. (0 ~ Height)    
 
-&emsp;<code class="code_accent">data(data)</code> : ...<br>
+&emsp;<code class="code_accent">data(data)</code> : Print 1byte data on the TextLcd. Data is written on the Textlcd.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`data` : Data to be sent to the Textlcd.    
 
-&emsp;<code class="code_accent">print(string)</code> : ...<br>
+&emsp;<code class="code_accent">print(string)</code> : Print string data on the Textlcd.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`string` : ...    
+&emsp;&emsp;&emsp;`string` : String data to be sent to the Textlcd.    
 
 ---
 
@@ -792,12 +792,26 @@ from pop import *
 
 &emsp;<code class="code_accent">Mpu6050(addr)</code> <br>&emsp;: Mpu6050 object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`addr` : ...    
+&emsp;&emsp;&emsp;`addr` : I2c slave address    
+
+&emsp;**Variables**    
+&emsp;<code class="code_accent">accelRawX</code> : Raw accel data of X axis.    
+&emsp;<code class="code_accent">accelRawY</code> : Raw accel data of Y axis.    
+&emsp;<code class="code_accent">accelRawZ</code> : Raw accel data of Z axis.    
+&emsp;<code class="code_accent">accelScaledX</code> : Scaled accel data of X axis.    
+&emsp;<code class="code_accent">accelScaledY</code> : Scaled accel data of Y axis.    
+&emsp;<code class="code_accent">accelScaledZ</code> : Scaled accel data of Z axis.    
+&emsp;<code class="code_accent">gyroRawX</code> : Raw gyro data of X axis.    
+&emsp;<code class="code_accent">gyroRawY</code> : Raw gyro data of Y axis.    
+&emsp;<code class="code_accent">gyroRawZ</code> : Raw gyro data of Z axis.    
+&emsp;<code class="code_accent">gyroScaledX</code> : Scaled gyro data of X axis.    
+&emsp;<code class="code_accent">gyroScaledY</code> : Scaled gyro data of Y axis.    
+&emsp;<code class="code_accent">gyroScaledZ</code> : Scaled gyro data of Z axis.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">readAccel()</code> : ...  
-&emsp;<code class="code_accent">readGyro()</code> : ...  
+&emsp;<code class="code_accent">readAccel()</code> : Update accel variables.  
+&emsp;<code class="code_accent">readGyro()</code> : Update gyro variables.  
 
 ---
 
