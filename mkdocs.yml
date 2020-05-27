@@ -1,9 +1,11 @@
 site_name: Pop Description
-theme: readthedocs
 
 markdown_extensions:
     - toc:
         baselevel: 2
+
+theme:
+    name: readthedocs
         
 extra_css: 
     - extra.css
