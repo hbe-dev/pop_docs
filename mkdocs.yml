@@ -1,9 +1,5 @@
 site_name: Pop Description
 
-markdown_extensions:
-    - toc:
-        baselevel: 2
-
 theme:
     name: readthedocs
     custom_dir: 'theme/'
