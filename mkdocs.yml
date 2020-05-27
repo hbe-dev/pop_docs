@@ -6,6 +6,10 @@ markdown_extensions:
 
 theme:
     name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - python
+        - c++
         
 extra_css: 
     - extra.css
