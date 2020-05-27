@@ -9,7 +9,9 @@ theme:
     highlightjs: true
     hljs_languages:
         - python
-        - c++
+        - cpp
+        - java
+        - javascript
         
 extra_css: 
     - extra.css
