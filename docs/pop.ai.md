@@ -9,6 +9,10 @@ Pop.AI is easy and fast education Library for artificial intelligence. This Libr
 
 <blockquote class="desc">A simple Linear Regression class for one to one datasets.</blockquote>
 
+``` python
+from pop.AI import Linear_Regression
+```
+
 <h5>&emsp;Initialization</h5>
 
 &emsp;<code class="code_accent">Linear_Regression(restore=False, ckpt_name="linear_regression")</code> : Linear Regression Object<br>
