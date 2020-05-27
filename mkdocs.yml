@@ -15,19 +15,6 @@ nav:
     - Home: index.md
     - Pop : pop.md
     - Pop.AI : pop.ai.md
-
-static_templates:
-    - 404.html
-
-include_search_page: true
-search_index_only: false
-
+    
 highlightjs: true
 hljs_languages: [python, cpp, java, javascript]
-
-include_homepage_in_sidebar: true
-prev_next_buttons_location: bottom
-navigation_depth: 4
-titles_only: false
-sticky_navigation: true
-collapse_navigation: true
