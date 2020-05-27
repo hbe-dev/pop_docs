@@ -18,11 +18,8 @@ Pop.AI is easy and fast education Library for artificial intelligence. This Libr
 
 <h5>&emsp;Definitions</h5>  
 
-&emsp;<code class="code_accent">TYPE_AVERAGE</code> : Average data based on sampling count    
-&emsp;<code class="code_accent">TYPE_NORMAL</code> : Unaveraged raw data    
-&emsp;<code class="code_accent">MODE_FULL</code> : Call Callback function always    
-&emsp;<code class="code_accent">MODE_INCLUSIVE</code> : If data is in arange(max, min), call Callback function    
-&emsp;<code class="code_accent">MODE_EXCLUSIVE</code> : If data is over arange, call Callback function    
+&emsp;<code class="code_accent">X_data</code> : Input data for training and prediction.    
+&emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction.     
 
 <h5>&emsp;Methods</h5>
 
