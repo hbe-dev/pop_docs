@@ -20,7 +20,7 @@ from pop.AI import Linear_Regression
 &emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
 &emsp;&emsp;&emsp;`ckpt_name` : Custom model name for saving and loading.
 
-<h5>&emsp;Definitions</h5>  
+<h5>&emsp;Variables</h5>  
 
 &emsp;<code class="code_accent">X_data</code> : Input data for training and prediction.    
 &emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction.     
@@ -62,7 +62,7 @@ from pop.AI import Logistic_Regression
 &emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
 &emsp;&emsp;&emsp;`ckpt_name` : Custom model name for saving and loading.
 
-<h5>&emsp;Definitions</h5>  
+<h5>&emsp;Variables</h5>  
 
 &emsp;<code class="code_accent">X_data</code> : Input data for training and prediction.    
 &emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction.     
