@@ -6,6 +6,7 @@ markdown_extensions:
 
 theme:
     name: readthedocs
+#    custom_dir: custom_theme/
         
 extra_css: 
     - extra.css
@@ -14,3 +15,6 @@ nav:
     - Home: index.md
     - Pop : pop.md
     - Pop.AI : pop.ai.md
+    
+highlightjs: true
+hljs_languages: [python, cpp, java, javascript]
