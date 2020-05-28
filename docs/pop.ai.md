@@ -17,7 +17,7 @@ from pop.AI import Linear_Regression
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Linear_Regression(restore=False, ckpt_name="linear_regression")</code> : Linear Regression Object<br>
+&emsp;<code class="code_accent">Linear_Regression(restore=False, ckpt_name="linear_regression_models")</code> : Linear Regression Object<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
 &emsp;&emsp;&emsp;`ckpt_name` : Custom model name for saving and loading.
@@ -60,7 +60,7 @@ from pop.AI import Logistic_Regression
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Logistic_Regression(input_size=1, restore=False, ckpt_name="logistic_regression")</code> : Logistic Regression Object<br>
+&emsp;<code class="code_accent">Logistic_Regression(input_size=1, restore=False, ckpt_name="logistic_regression_models")</code> : Logistic Regression Object<br>
 &emsp;&emsp;**Params**  
 &emsp;&emsp;&emsp;`input_size` : Size of one dataset input.   
 &emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
