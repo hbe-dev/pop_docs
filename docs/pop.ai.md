@@ -9,6 +9,7 @@ Pop.AI is easy and fast education Library for artificial intelligence. This Libr
 
 <blockquote class="desc">A simple Linear Regression class for one to one datasets.</blockquote>
 
+The code to import the Linear_Regression Class :
 ``` python
 from pop.AI import Linear_Regression
 ```
@@ -22,8 +23,8 @@ from pop.AI import Linear_Regression
 
 <h5>&emsp;Variables</h5>  
 
-&emsp;<code class="code_accent">X_data</code> : Input data for training and prediction.    
-&emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction.     
+&emsp;<code class="code_accent">X_data</code> : Input data for training and prediction. It must be 1-Dimensional Array like (None) shape. (ex, [0, 1, 2, 3])    
+&emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction. It must be 1-Dimensional Array like (None) shape. (ex, [0, 1, 2, 3])     
 
 <h5>&emsp;Methods</h5>
 
