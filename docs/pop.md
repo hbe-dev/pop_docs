@@ -237,45 +237,45 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">calibration(rl=4.7, clean=1)</code> : ...<br>
+&emsp;<code class="code_accent">calibration(rl=4.7, clean=1)</code> : return calibration R0(using calculation gas value) value <br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`rl` : ...    
-&emsp;&emsp;&emsp;`clean` : ...    
+&emsp;&emsp;&emsp;`rl` : register in circuit   
+&emsp;&emsp;&emsp;`clean` : value in clean air
 
-&emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : ...<br>
+&emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : setPropanCurve<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x` : ...    
-&emsp;&emsp;&emsp;`y` : ...    
-&emsp;&emsp;&emsp;`inclination` : ...    
+&emsp;&emsp;&emsp;`x` : any x-axis of PropanCurve in datasheet    
+&emsp;&emsp;&emsp;`y` : any y-axis of PropanCurve in datasheet  
+&emsp;&emsp;&emsp;`inclination` : inclination of PropanCurve in datasheet    
 
-&emsp;<code class="code_accent">setMethanCurve(x, y, inclination)</code> : ...<br>
+&emsp;<code class="code_accent">setMethanCurve(x, y, inclination)</code> : setMethanCurve<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x` : ...    
-&emsp;&emsp;&emsp;`y` : ...    
-&emsp;&emsp;&emsp;`inclination` : ...    
+&emsp;&emsp;&emsp;`x` : any x-axis of PropanCurve in datasheet    
+&emsp;&emsp;&emsp;`y` : any y-axis of PropanCurve in datasheet    
+&emsp;&emsp;&emsp;`inclination` : inclination of PropanCurve in datasheet    
 
-&emsp;<code class="code_accent">setEthanolCurve(x, y, inclination)</code> : ...<br>
+&emsp;<code class="code_accent">setEthanolCurve(x, y, inclination)</code> : setEthanolCurve<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x` : ...    
-&emsp;&emsp;&emsp;`y` : ...    
-&emsp;&emsp;&emsp;`inclination` : ...    
+&emsp;&emsp;&emsp;`x` : any x-axis of PropanCurve in datasheet    
+&emsp;&emsp;&emsp;`y` : any y-axis of PropanCurve in datasheet    
+&emsp;&emsp;&emsp;`inclination` : inclination of PropanCurve in datasheet    
 
-&emsp;<code class="code_accent">calcPropan(val)</code> : ...<br>
+&emsp;<code class="code_accent">calcPropan(val)</code> : return Propan Gas value as ppm<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : raw ADC value     
 
-&emsp;<code class="code_accent">calcMethan(val)</code> : ...<br>
+&emsp;<code class="code_accent">calcMethan(val)</code> : return Methan Gas value as ppm<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : raw ADC value    
 
-&emsp;<code class="code_accent">calcEthanol(val)</code> : ...<br>
+&emsp;<code class="code_accent">calcEthanol(val)</code> : return Ethanol Gas value as ppm<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : raw ADC value    
 
-&emsp;<code class="code_accent">resistanceCalculation(val, rl=4.7)</code> : ...<br>
+&emsp;<code class="code_accent">resistanceCalculation(val, rl=4.7)</code> : return resistance value<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
-&emsp;&emsp;&emsp;`rl` : ...    
+&emsp;&emsp;&emsp;`val` : raw ADC value    
+&emsp;&emsp;&emsp;`rl` : register in circuit     
 
 ---
 
