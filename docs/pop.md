@@ -760,11 +760,11 @@ from pop import *
 &emsp;<code class="code_accent">displayShiftL()</code> : Shift the display to left.  
 &emsp;<code class="code_accent">cursorShiftR()</code> : Shift cursor to right.  
 &emsp;<code class="code_accent">cursorShiftL()</code> : Shift cursor to left.  
-&emsp;<code class="code_accent">entryModeSet()</code> : ...  
+&emsp;<code class="code_accent">entryModeSet()</code> : Set Entry Mode.  
 &emsp;<code class="code_accent">cursorOff()</code> : Turn off cursor.  
-&emsp;<code class="code_accent">cursorOn(blinking)</code> : Turn on cursor.<br>
+&emsp;<code class="code_accent">cursorOn(blink)</code> : Turn on cursor.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blinking` : If True, cursor is blinking. Else False, cursor is always on.    
+&emsp;&emsp;&emsp;`blink` : If True, cursor is blinking. Else False, cursor is always on. Default is False    
 
 &emsp;<code class="code_accent">command(command)</code> : Send the command to TextLcd<br>
 &emsp;&emsp;**Params**   
@@ -790,9 +790,12 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Mpu6050(addr)</code> <br>&emsp;: Mpu6050 object<br>
+&emsp;<code class="code_accent">Mpu6050(addr=MPU6050_ADDR)</code> <br>&emsp;: Mpu6050 object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`addr` : I2c slave address    
+&emsp;&emsp;&emsp;`addr` : I2c slave address. Default is MPU6050_ADDR (0x68).    
+
+&emsp;**Definitions**    
+&emsp;<code class="code_accent">MPU6050_ADDR</code> : Mpu6050 I2C slave address. Value is 0x68   
 
 &emsp;**Variables**    
 &emsp;<code class="code_accent">accelRawX</code> : Raw accel data of X axis.    
